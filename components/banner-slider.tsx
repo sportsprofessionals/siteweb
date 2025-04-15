@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -40,6 +40,9 @@ const slides: Slide[] = [
 
 export default function BannerSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const touchStartX = useRef(0)
+  const touchEndX = useRef(0)
+  const sliderRef = useRef<HTMLDivElement>(null)
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
@@ -47,6 +50,28 @@ export default function BannerSlider() {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
+  }
+
+  // Handle touch events for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    const minSwipeDistance = 50
+    const swipeDistance = touchEndX.current - touchStartX.current
+    
+    if (Math.abs(swipeDistance) > minSwipeDistance) {
+      if (swipeDistance > 0) {
+        prevSlide() // Swipe right, go to previous slide
+      } else {
+        nextSlide() // Swipe left, go to next slide
+      }
+    }
   }
 
   useEffect(() => {
@@ -57,7 +82,13 @@ export default function BannerSlider() {
   }, [])
 
   return (
-    <div className="relative h-[500px] md:h-[600px] overflow-hidden">
+    <div 
+      className="relative h-[500px] md:h-[600px] overflow-hidden" 
+      ref={sliderRef}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -88,26 +119,30 @@ export default function BannerSlider() {
         </div>
       ))}
 
-      <Button
-        variant="outline"
-        size="icon"
-        className="absolute left-4 top-1/2 z-30 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm"
-        onClick={prevSlide}
-      >
-        <ChevronLeft className="h-6 w-6" />
-        <span className="sr-only">Anterior</span>
-      </Button>
+      {/* Botones de navegación - solo visibles en tablets/desktop */}
+      <div className="hidden md:block">
+        <Button
+          variant="outline"
+          size="icon"
+          className="absolute left-4 top-1/2 z-30 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm"
+          onClick={prevSlide}
+        >
+          <ChevronLeft className="h-6 w-6" />
+          <span className="sr-only">Anterior</span>
+        </Button>
 
-      <Button
-        variant="outline"
-        size="icon"
-        className="absolute right-4 top-1/2 z-30 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm"
-        onClick={nextSlide}
-      >
-        <ChevronRight className="h-6 w-6" />
-        <span className="sr-only">Siguiente</span>
-      </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          className="absolute right-4 top-1/2 z-30 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm"
+          onClick={nextSlide}
+        >
+          <ChevronRight className="h-6 w-6" />
+          <span className="sr-only">Siguiente</span>
+        </Button>
+      </div>
 
+      {/* Indicadores de diapositiva */}
       <div className="absolute bottom-4 left-1/2 z-30 flex -translate-x-1/2 space-x-2">
         {slides.map((_, index) => (
           <button
