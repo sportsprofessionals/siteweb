@@ -16,21 +16,21 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "/Administracion-Deportiva.png",
+    image: "/Administracion-Deportiva.jpg",
     title: "Administración Deportiva",
     description: "Planeación estratégica y liderazgo para el éxito de su organización deportiva",
     buttonText: "Conocer más",
     buttonLink: "/servicios/administracion-deportiva",
   },
   {
-    image: "/Servicios-Deportivos.png",
+    image: "/Servicios-Deportivos.jpg",
     title: "Servicios Deportivos",
     description: "Capacitación en entrenamiento deportivo y monitores especializados",
     buttonText: "Ver servicios",
     buttonLink: "/servicios/servicios-deportivos",
   },
   {
-    image: "/Formacion-Profesional.png",
+    image: "/Formacion-Profesional.jpg",
     title: "Formación Profesional",
     description: "Transferimos nuestro conocimiento y experiencia en el mundo de la gestión del deporte",
     buttonText: "Programas",
