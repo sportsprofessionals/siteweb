@@ -33,7 +33,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.jpg" alt="SPORTSPROFESSIONALS Logo" width={40} height={40} className="h-10 w-auto" />
+          <Image src="/logo1.png" alt="SPORTSPROFESSIONALS Logo" width={40} height={40} className="h-10 w-auto" />
           <span className="text-xl font-bold text-[#5E308C]">SPORTSPROFESSIONALS</span>
         </Link>
 

@@ -47,12 +47,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
-        <ThemeProvider >
+        <ThemeProvider>
           <AnimationProvider>
             <div className="flex min-h-screen flex-col">
               <Navbar />
@@ -66,6 +66,5 @@ export default function RootLayout({
     </html>
   )
 }
-
 
 import './globals.css'

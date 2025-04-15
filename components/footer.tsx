@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/logo.png" alt="SPORTSPROFESSIONALS Logo" width={40} height={40} className="h-10 w-auto" />
+              <Image src="/logo1.png" alt="SPORTSPROFESSIONALS Logo" width={40} height={40} className="h-10 w-auto" />
               <span className="text-xl font-bold">SPORTSPROFESSIONALS</span>
             </div>
             <p className="text-sm text-gray-400 mb-4">
@@ -71,11 +71,7 @@ export default function Footer() {
                   Quiénes Somos
                 </Link>
               </li>
-              <li>
-                <Link href="/unofit" className="hover:text-white transition-colors">
-                  UNOFIT
-                </Link>
-              </li>
+             
               <li>
                 <Link href="/formacion" className="hover:text-white transition-colors">
                   Formación
