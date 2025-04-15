@@ -7,12 +7,15 @@ import { Button } from "@/components/ui/button"
 import BannerSlider from "@/components/banner-slider"
 import ServiceCard from "@/components/service-card"
 import { useAnimation } from "@/components/animation-provider"
+import CookieBanner from "@/components/cookie-banner"
+
 
 export default function Home() {
   const { FadeIn, SlideIn, ScaleIn } = useAnimation()
 
   return (
     <div>
+      <CookieBanner/>
       <BannerSlider />
 
       {/* Servicios */}
