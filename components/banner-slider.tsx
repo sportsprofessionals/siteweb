@@ -54,9 +54,26 @@ const slides: Slide[] = [
 
 export default function BannerSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
   const touchStartX = useRef(0)
   const touchEndX = useRef(0)
   const sliderRef = useRef<HTMLDivElement>(null)
+
+  // Check if device is mobile when component mounts and on window resize
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    // Set initial value
+    checkIfMobile()
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile)
+    
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', checkIfMobile)
+  }, [])
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
@@ -129,21 +146,26 @@ export default function BannerSlider() {
         </div>
       ))}
       
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </button>
+      {/* Navigation buttons - only shown on non-mobile devices */}
+      {!isMobile && (
+        <>
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full hidden md:block"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full hidden md:block"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </>
+      )}
       
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
         {slides.map((_, index) => (

@@ -106,7 +106,7 @@ export default function Home() {
             <SlideIn direction="up" delay={0.4}>
               <div className="relative group overflow-hidden rounded-lg">
                 <Image
-                  src="/deporte.jpg"
+                  src="/Deporte.jpg"
                   alt="Deporte"
                   width={400}
                   height={300}
