@@ -37,7 +37,7 @@ const slides: Slide[] = [
     buttonLink: "/servicios/actividad-fisica",
   },
   {
-    image: "/deporte.jpg",
+    image: "/Deporte.jpg",
     title: "Deporte",
     description: "Alto rendimiento, inclusión y desarrollo deportivo integral",
     buttonText: "Descubrir",
