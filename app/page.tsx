@@ -8,6 +8,7 @@ import BannerSlider from "@/components/banner-slider"
 import ServiceCard from "@/components/service-card"
 import { useAnimation } from "@/components/animation-provider"
 import CookieBanner from "@/components/cookie-banner"
+import { ArticlesSection } from "@/components/ArticlesSection"
 
 
 export default function Home() {
@@ -152,6 +153,8 @@ export default function Home() {
         </div>
       </section>
 
+     
+
       {/* Quiénes Somos */}
       <section className="py-16 md:py-24 bg-[#F8F9FA]">
         <div className="container px-4 md:px-6">
@@ -247,7 +250,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+ {/* Artículos Deportivos */}
+ <ArticlesSection />
       {/* Escenarios Deportivos */}
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">

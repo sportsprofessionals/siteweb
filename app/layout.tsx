@@ -5,7 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import WhatsAppButton from "@/components/whatsapp-button"
+import SocialMediaButtons from "@/components/social-media-buttons"
 import { AnimationProvider } from "@/components/animation-provider"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -58,7 +58,7 @@ export default function RootLayout({
               <Navbar />
               <main className="flex-1">{children}</main>
               <Footer />
-              <WhatsAppButton />
+              <SocialMediaButtons />
             </div>
           </AnimationProvider>
         </ThemeProvider>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.sportsprofessionals.com.co/
+
+# Sitemaps
+Sitemap: https://www.sportsprofessionals.com.co/sitemap.xml
