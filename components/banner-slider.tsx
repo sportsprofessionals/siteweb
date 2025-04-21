@@ -16,25 +16,39 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "/Administracion-Deportiva.jpg",
+    image: "/admin-deportiva.jpg",
     title: "Administración Deportiva",
     description: "Planeación estratégica y liderazgo para el éxito de su organización deportiva",
     buttonText: "Conocer más",
     buttonLink: "/servicios/administracion-deportiva",
   },
   {
-    image: "/Servicios-Deportivos.jpg",
-    title: "Servicios Deportivos",
-    description: "Capacitación en entrenamiento deportivo y monitores especializados",
+    image: "/educacion-fisica.jpg",
+    title: "Educación Física",
+    description: "Formación y desarrollo de habilidades motoras para todas las edades",
     buttonText: "Ver servicios",
-    buttonLink: "/servicios/servicios-deportivos",
+    buttonLink: "/servicios/educacion-fisica",
   },
   {
-    image: "/Formacion-Profesional.jpg",
-    title: "Formación Profesional",
-    description: "Transferimos nuestro conocimiento y experiencia en el mundo de la gestión del deporte",
-    buttonText: "Programas",
-    buttonLink: "/formacion",
+    image: "/actividad-fisica.jpg",
+    title: "Actividad Física",
+    description: "Programas personalizados para mejorar la salud y el bienestar",
+    buttonText: "Explorar",
+    buttonLink: "/servicios/actividad-fisica",
+  },
+  {
+    image: "/deporte.jpg",
+    title: "Deporte",
+    description: "Alto rendimiento, inclusión y desarrollo deportivo integral",
+    buttonText: "Descubrir",
+    buttonLink: "/servicios/deporte",
+  },
+  {
+    image: "/recreacion.jpg",
+    title: "Recreación",
+    description: "Experiencias activas y bienestar integral para empresas e instituciones",
+    buttonText: "Conocer más",
+    buttonLink: "/servicios/recreacion",
   },
 ]
 
@@ -99,62 +113,49 @@ export default function BannerSlider() {
         >
           <div className="absolute inset-0 bg-black/50 z-10" />
           <Image
-            src={slide.image || "/placeholder.svg"}
+            src={slide.image}
             alt={slide.title}
             fill
             className="object-cover"
             priority={index === 0}
           />
-          <div className="relative z-20 flex h-full items-center">
-            <div className="container px-4 md:px-6">
-              <div className="max-w-lg text-white">
-                <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">{slide.title}</h1>
-                <p className="mb-6 text-lg text-gray-200">{slide.description}</p>
-                <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6] text-white">
-                  <a href={slide.buttonLink}>{slide.buttonText}</a>
-                </Button>
-              </div>
-            </div>
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white p-4">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">{slide.title}</h1>
+            <p className="text-lg md:text-xl max-w-2xl mb-8">{slide.description}</p>
+            <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+              <a href={slide.buttonLink}>{slide.buttonText}</a>
+            </Button>
           </div>
         </div>
       ))}
-
-      {/* Botones de navegación - solo visibles en tablets/desktop */}
-      <div className="hidden md:block">
-        <Button
-          variant="outline"
-          size="icon"
-          className="absolute left-4 top-1/2 z-30 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm"
-          onClick={prevSlide}
-        >
-          <ChevronLeft className="h-6 w-6" />
-          <span className="sr-only">Anterior</span>
-        </Button>
-
-        <Button
-          variant="outline"
-          size="icon"
-          className="absolute right-4 top-1/2 z-30 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm"
-          onClick={nextSlide}
-        >
-          <ChevronRight className="h-6 w-6" />
-          <span className="sr-only">Siguiente</span>
-        </Button>
-      </div>
-
-      {/* Indicadores de diapositiva */}
-      <div className="absolute bottom-4 left-1/2 z-30 flex -translate-x-1/2 space-x-2">
+      
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
+      
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={cn(
-              "h-2 w-2 rounded-full transition-colors",
-              index === currentSlide ? "bg-white" : "bg-white/50",
-            )}
             onClick={() => setCurrentSlide(index)}
-          >
-            <span className="sr-only">Diapositiva {index + 1}</span>
-          </button>
+            className={cn(
+              "w-3 h-3 rounded-full transition-colors",
+              index === currentSlide ? "bg-white" : "bg-white/50"
+            )}
+            aria-label={`Go to slide ${index + 1}`}
+          />
         ))}
       </div>
     </div>

@@ -14,15 +14,18 @@ const navLinks = [
     href: "#",
     submenu: [
       { name: "Administración Deportiva", href: "/servicios/administracion-deportiva" },
-      { name: "Servicios Deportivos", href: "/servicios/servicios-deportivos" },
-      { name: "Servicios Recreativos", href: "/servicios/servicios-recreativos" },
-
+      { name: "Educación Física", href: "/servicios/educacion-fisica" },
+      { name: "Actividad Física", href: "/servicios/actividad-fisica" },
+      { name: "Deporte", href: "/servicios/deporte" },
+      { name: "Recreación", href: "/servicios/recreacion" },
     ],
   },
   { name: "Quiénes Somos", href: "/quienes-somos" },
   { name: "Formación", href: "/formacion" },
+  /*
   { name: "Clientes", href: "/clientes" },
   { name: "Escenarios", href: "/escenarios-deportivos" },
+   */
   { name: "Contacto", href: "/contacto" },
 ]
 

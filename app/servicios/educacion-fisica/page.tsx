@@ -4,20 +4,20 @@ import { useAnimation } from "@/components/animation-provider"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 
-export default function AdministracionDeportivaPage() {
+export default function EducacionFisicaPage() {
   const { FadeIn, SlideIn } = useAnimation()
 
   return (
     <div className="container py-16 md:py-24">
       <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
         <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
-          Administración Deportiva
+          Educación Física
         </div>
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          Servicios en Administración Deportiva
+          Servicios en Educación Física
         </h1>
         <p className="max-w-[700px] text-muted-foreground md:text-xl">
-          Ofrecemos servicios especializados en gestión y administración deportiva para organizaciones e instituciones.
+          Ofrecemos servicios especializados en educación física para instituciones educativas y organizaciones.
         </p>
       </FadeIn>
 
@@ -27,23 +27,23 @@ export default function AdministracionDeportivaPage() {
             <CardHeader>
               <CardTitle>Servicios Principales</CardTitle>
               <CardDescription>
-                Soluciones integrales para la gestión deportiva
+                Soluciones integrales para la educación física
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="list-disc list-inside space-y-2">
-                <li>Planeación estratégica en administración deportiva</li>
-                <li>Liderazgo para las organizaciones deportivas</li>
-                <li>Marketing deportivo</li>
-                <li>Administración de instalaciones deportivas</li>
-                <li>Capacitación en finanzas para el contexto del deporte</li>
-                <li>Emprendimiento y planes de negocio en el deporte</li>
-                <li>Metodología de la investigación en la administración deportiva</li>
-                <li>Organización y planificación de eventos deportivos</li>
-                <li>Teoría de la administración deportiva</li>
-                <li>Gobernanza deportiva</li>
-                <li>E-Sports y deportes electrónicos</li>
-                <li>Turismo deportivo</li>
+                <li>Metodología de la enseñanza de la educación física</li>
+                <li>Historia y epistemología de la educación física</li>
+                <li>Desarrollo del talento deportivo</li>
+                <li>Psicología del deporte y la actividad física</li>
+                <li>Fisiología del ejercicio</li>
+                <li>Biomecánica del movimiento humano</li>
+                <li>Nutrición deportiva</li>
+                <li>Primeros auxilios y prevención de lesiones</li>
+                <li>Actividad física y salud</li>
+                <li>Deporte escolar y recreativo</li>
+                <li>Evaluación y medición en educación física</li>
+                <li>Didáctica de la educación física</li>
               </ul>
             </CardContent>
           </Card>
@@ -53,16 +53,16 @@ export default function AdministracionDeportivaPage() {
           <div className="space-y-6">
             <div className="relative h-64 w-full overflow-hidden rounded-lg">
               <Image
-                src="/admin-deportiva.jpg"
-                alt="Administración Deportiva"
+                src="/educacion-fisica.jpg"
+                alt="Educación Física"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="relative h-64 w-full overflow-hidden rounded-lg">
               <Image
-                src="/admin-deportiva-2.jpg"
-                alt="Gestión Deportiva"
+                src="/educacion-fisica-2.jpg"
+                alt="Enseñanza Deportiva"
                 fill
                 className="object-cover"
               />
@@ -77,27 +77,27 @@ export default function AdministracionDeportivaPage() {
             <CardHeader>
               <CardTitle>Beneficios de Nuestros Servicios</CardTitle>
               <CardDescription>
-                ¿Por qué elegir nuestros servicios de administración deportiva?
+                ¿Por qué elegir nuestros servicios de educación física?
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid gap-6 md:grid-cols-3">
                 <div className="space-y-2">
-                  <h3 className="text-lg font-semibold">Experiencia</h3>
+                  <h3 className="text-lg font-semibold">Expertise</h3>
                   <p className="text-muted-foreground">
-                    Años de experiencia en la gestión y administración de organizaciones deportivas.
+                    Profesionales altamente capacitados en educación física y deportes.
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-semibold">Innovación</h3>
+                  <h3 className="text-lg font-semibold">Metodología</h3>
                   <p className="text-muted-foreground">
-                    Soluciones modernas y adaptadas a las necesidades actuales del sector deportivo.
+                    Enfoques pedagógicos innovadores y efectivos para el aprendizaje.
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-semibold">Resultados</h3>
+                  <h3 className="text-lg font-semibold">Impacto</h3>
                   <p className="text-muted-foreground">
-                    Enfoque en resultados medibles y mejoras tangibles para su organización.
+                    Resultados medibles en el desarrollo físico y deportivo de los estudiantes.
                   </p>
                 </div>
               </div>
@@ -107,4 +107,4 @@ export default function AdministracionDeportivaPage() {
       </div>
     </div>
   )
-}
+} 

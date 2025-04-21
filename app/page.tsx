@@ -18,6 +18,174 @@ export default function Home() {
       <CookieBanner/>
       <BannerSlider />
 
+      {/* Servicios Principales */}
+      <section className="py-16 md:py-24">
+        <div className="container px-4 md:px-6">
+          <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+              Nuestros Servicios
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              Soluciones Integrales para el Deporte
+            </h2>
+            <p className="max-w-[700px] text-muted-foreground md:text-xl">
+              Ofrecemos servicios especializados en administración deportiva, educación física, actividad física, deporte y recreación.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <SlideIn direction="up" delay={0.1}>
+              <div className="relative group overflow-hidden rounded-lg">
+                <Image
+                  src="/admin-deportiva.jpg"
+                  alt="Administración Deportiva"
+                  width={400}
+                  height={300}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
+                  <h3 className="text-xl font-bold">Administración Deportiva</h3>
+                  <p className="text-white/80">Gestión y planeación estratégica para organizaciones deportivas</p>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
+                  >
+                    <Link href="/servicios/administracion-deportiva">Ver más</Link>
+                  </Button>
+                </div>
+              </div>
+            </SlideIn>
+
+            <SlideIn direction="up" delay={0.2}>
+              <div className="relative group overflow-hidden rounded-lg">
+                <Image
+                  src="/educacion-fisica.jpg"
+                  alt="Educación Física"
+                  width={400}
+                  height={300}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
+                  <h3 className="text-xl font-bold">Educación Física</h3>
+                  <p className="text-white/80">Formación y desarrollo de habilidades motoras</p>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
+                  >
+                    <Link href="/servicios/educacion-fisica">Ver más</Link>
+                  </Button>
+                </div>
+              </div>
+            </SlideIn>
+
+            <SlideIn direction="up" delay={0.3}>
+              <div className="relative group overflow-hidden rounded-lg">
+                <Image
+                  src="/actividad-fisica.jpg"
+                  alt="Actividad Física"
+                  width={400}
+                  height={300}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
+                  <h3 className="text-xl font-bold">Actividad Física</h3>
+                  <p className="text-white/80">Programas personalizados para todas las edades</p>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
+                  >
+                    <Link href="/servicios/actividad-fisica">Ver más</Link>
+                  </Button>
+                </div>
+              </div>
+            </SlideIn>
+
+            <SlideIn direction="up" delay={0.4}>
+              <div className="relative group overflow-hidden rounded-lg">
+                <Image
+                  src="/deporte.jpg"
+                  alt="Deporte"
+                  width={400}
+                  height={300}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
+                  <h3 className="text-xl font-bold">Deporte</h3>
+                  <p className="text-white/80">Alto rendimiento, inclusión y desarrollo deportivo</p>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
+                  >
+                    <Link href="/servicios/deporte">Ver más</Link>
+                  </Button>
+                </div>
+              </div>
+            </SlideIn>
+
+            <SlideIn direction="up" delay={0.5}>
+              <div className="relative group overflow-hidden rounded-lg">
+                <Image
+                  src="/recreacion.jpg"
+                  alt="Recreación"
+                  width={400}
+                  height={300}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
+                  <h3 className="text-xl font-bold">Recreación</h3>
+                  <p className="text-white/80">Experiencias activas y bienestar integral</p>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
+                  >
+                    <Link href="/servicios/recreacion">Ver más</Link>
+                  </Button>
+                </div>
+              </div>
+            </SlideIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Quiénes Somos */}
+      <section className="py-16 md:py-24 bg-[#F8F9FA]">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <ScaleIn>
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+                  Nuestra Misión
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  Misión
+                </h2>
+                <p className="text-muted-foreground md:text-lg">
+                  Brindar soluciones integrales e innovadoras a nuestros clientes POR MEDIO de servicios especializados en administración deportiva, educación física, actividad física, deporte y recreación, QUE CONTRIBUYA EFECTIVAMENTE al desarrollo social y económico del país.
+                </p>
+              </div>
+            </ScaleIn>
+            <SlideIn direction="right">
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+                  Nuestra Visión
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                  Visión
+                </h2>
+                <p className="text-muted-foreground md:text-lg">
+                  Posicionarnos, en el año 2029, como una organización de excelencia, altamente competitiva y referente a nivel nacional e internacional, reconocida por su liderazgo en servicios integrales e innovadores en los ámbitos de la gestión deportiva, la educación física, la actividad física, el deporte y la recreación.
+                </p>
+              </div>
+            </SlideIn>
+          </div>
+        </div>
+      </section>
+
       {/* Servicios */}
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
@@ -75,60 +243,7 @@ export default function Home() {
                 href="/servicios/educacion-fisica"
               />
             </SlideIn>
-            <SlideIn direction="up" delay={0.6}>
-              <ServiceCard
-                icon={Briefcase}
-                title="UNOFIT"
-                description="Dirección y gestión de instalaciones deportivas, gimnasios, centros y complejos deportivos."
-                href="/unofit"
-              />
-            </SlideIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Quiénes Somos */}
-      <section className="py-16 md:py-24 bg-[#F8F9FA]">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-            <ScaleIn>
-              {/* Responsive video wrapper */}
-              <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/bkE8MCktfGI"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute top-0 left-0 w-full h-full"
-                />
-              </div>
-            </ScaleIn>
-            <SlideIn direction="right">
-              <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
-                  Quiénes Somos
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                  Profesionales al Servicio del Deporte
-                </h2>
-                <p className="text-muted-foreground md:text-lg">
-                  Somos una empresa conformada por profesionales, que trabajamos en el sector público y privado,
-                  ofreciendo servicios relacionados con la industria del deporte en los segmentos de la educación
-                  física, recreación, administración del deporte y actividad física, para alcanzar resultados sobre las
-                  necesidades de nuestros clientes con eficacia y eficiencia.
-                </p>
-                <h3 className="text-xl font-bold">Nuestra Filosofía</h3>
-                <p className="text-muted-foreground md:text-lg">
-                  Nuestro actuar diario está soportado por la calidad en la prestación de los servicios relacionados con
-                  la industria del deporte. La compañía está comprometida en el desarrollo del talento humano
-                  empresarial y comunitario, en el bienestar y en el fortalecimiento de su calidad de vida.
-                </p>
-                <div className="pt-4">
-                  <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
-                    <Link href="/quienes-somos">Conocer más</Link>
-                  </Button>
-                </div>
-              </div>
-            </SlideIn>
+            
           </div>
         </div>
       </section>

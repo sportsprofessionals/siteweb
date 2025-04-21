@@ -191,7 +191,7 @@ export default function Contacto() {
                   Contáctanos directamente por WhatsApp para una atención más rápida.
                 </p>
                 <Button
-                  onClick={() => window.open("https://wa.me/3105627575", "_blank")}
+                  onClick={() => window.open("https://wa.me/573105627575", "_blank")}
                   className="bg-[#41A650] hover:bg-[#41A650]/90"
                 >
                   Contactar por WhatsApp
