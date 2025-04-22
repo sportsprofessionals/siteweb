@@ -27,6 +27,47 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  async redirects() {
+    return [
+      // Redirecciones específicas para las URLs antiguas
+      {
+        source: "/noticias",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/servicios-deportivos",
+        destination: "/servicios/servicios-deportivos",
+        permanent: true,
+      },
+      {
+        source: "/servicios-recreativos",
+        destination: "/servicios/servicios-recreativos",
+        permanent: true,
+      },
+      {
+        source: "/administracion-deportiva",
+        destination: "/servicios/administracion-deportiva",
+        permanent: true,
+      },
+      {
+        source: "/servicios-en-actividad-fisica",
+        destination: "/servicios/actividad-fisica",
+        permanent: true,
+      },
+      {
+        source: "/home-new-3-4-3",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/2024/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      // Eliminada la redirección genérica que podría estar causando problemas
+    ];
+  },
 };
 
 if (userConfig) {
