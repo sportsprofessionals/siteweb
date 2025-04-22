@@ -14,8 +14,7 @@ export const articles: Article[] = [
     title: "Principios Generales del Entrenamiento Deportivo",
     summary:
       "Descubre los principios fundamentales que rigen el entrenamiento deportivo, incluyendo individualidad, especificidad, reversibilidad y sobrecarga progresiva.",
-    author:
-      "Larry Kenney, Jack H. Wilmore y David L. Costill, Adaptado por Sportsprofessionals",
+    author: "Larry Kenney, Jack H. Wilmore y David L. Costill",
     imageUrl: "/entrenamiento-deportivo.jpg",
     sport: "Entrenamiento Deportivo",
     content: `Las distintas formas de entrenamiento físico se rigen por una serie de principios generales fundamentados en la fisiología del ejercicio y del deporte. A continuación, presentamos los siguientes:
@@ -107,8 +106,7 @@ Gracias a esta planificación escalonada y variada, los jugadores logran un mejo
     title: "Educación Física: Crecimiento, Desarrollo y Maduración",
     summary:
       "Los profesionales de la Educación Física deben comprender cómo los niños y adolescentes reaccionan al ejercicio y a las actividades deportivas en el contexto escolar.",
-    author:
-      "Larry Kenney, Jack H. Wilmore y David L. Costill, Adaptado por Sportsprofessionals",
+    author: "Larry Kenney, Jack H. Wilmore y David L. Costill",
     imageUrl: "/educacion-fisica.jpg",
     sport: "Educación Física",
     content: `Los profesionales de la Educación Física en el contexto escolar deben tener una sólida compresión cabal de la forma en que los niños y adolescentes reaccionan al ejercicio y a las actividades deportivas en la clase de educación física, esto reviste especial importancia porque la actividad física en nuestros tiempos es esencial para combatir la obesidad infantil y para que los niños aprendan a desarrollar hábitos saludables para toda su vida.
