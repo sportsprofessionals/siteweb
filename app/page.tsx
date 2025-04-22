@@ -9,6 +9,13 @@ import ServiceCard from "@/components/service-card"
 import { useAnimation } from "@/components/animation-provider"
 import CookieBanner from "@/components/cookie-banner"
 import { ArticlesSection } from "@/components/ArticlesSection"
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselPrevious, 
+  CarouselNext 
+} from "@/components/ui/carousel"
 
 
 export default function Home() {
@@ -52,7 +59,7 @@ export default function Home() {
                     variant="outline"
                     className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
                   >
-                    <Link href="/servicios/administracion-deportiva">Ver más</Link>
+                    <Link href="/servicios/administracion-deportiva">Conocer más</Link>
                   </Button>
                 </div>
               </div>
@@ -75,7 +82,7 @@ export default function Home() {
                     variant="outline"
                     className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
                   >
-                    <Link href="/servicios/educacion-fisica">Ver más</Link>
+                    <Link href="/servicios/educacion-fisica">Conocer más</Link>
                   </Button>
                 </div>
               </div>
@@ -98,7 +105,7 @@ export default function Home() {
                     variant="outline"
                     className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
                   >
-                    <Link href="/servicios/actividad-fisica">Ver más</Link>
+                    <Link href="/servicios/actividad-fisica">Conocer más</Link>
                   </Button>
                 </div>
               </div>
@@ -121,7 +128,7 @@ export default function Home() {
                     variant="outline"
                     className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
                   >
-                    <Link href="/servicios/deporte">Ver más</Link>
+                    <Link href="/servicios/deporte">Conocer más</Link>
                   </Button>
                 </div>
               </div>
@@ -144,7 +151,7 @@ export default function Home() {
                     variant="outline"
                     className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
                   >
-                    <Link href="/servicios/recreacion">Ver más</Link>
+                    <Link href="/servicios/recreacion">Conocer más</Link>
                   </Button>
                 </div>
               </div>
@@ -158,6 +165,18 @@ export default function Home() {
       {/* Quiénes Somos */}
       <section className="py-16 md:py-24 bg-[#F8F9FA]">
         <div className="container px-4 md:px-6">
+          <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+              Sobre Nosotros
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              Nuestra Identidad
+            </h2>
+            <p className="max-w-[700px] text-muted-foreground md:text-xl">
+              Conoce nuestra misión, visión y valores que nos guían en el desarrollo del deporte y la recreación.
+            </p>
+          </FadeIn>
+          
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <ScaleIn>
               <div className="space-y-4">
@@ -205,48 +224,71 @@ export default function Home() {
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <SlideIn direction="up" delay={0.1}>
-              <ServiceCard
-                icon={Briefcase}
-                title="Administración Deportiva"
-                description="Planeación estratégica, liderazgo, marketing social del deporte y asesorías a empresas deportivas."
-                href="/servicios/administracion-deportiva"
-              />
-            </SlideIn>
-            <SlideIn direction="up" delay={0.2}>
-              <ServiceCard
-                icon={Dumbbell}
-                title="Servicios Deportivos"
-                description="Capacitación en entrenamiento deportivo, monitores deportivos, entrenadores y turismo deportivo."
-                href="/servicios/servicios-deportivos"
-              />
-            </SlideIn>
-            <SlideIn direction="up" delay={0.3}>
-              <ServiceCard
-                icon={Users}
-                title="Servicios Recreativos"
-                description="Organización de eventos recreativos, caminatas ecológicas, campamentos juveniles y familiares."
-                href="/servicios/servicios-recreativos"
-              />
-            </SlideIn>
-            <SlideIn direction="up" delay={0.4}>
-              <ServiceCard
-                icon={Award}
-                title="Actividad Física"
-                description="Pausas activas empresariales, actividad física para adultos y acondicionamiento físico."
-                href="/servicios/actividad-fisica"
-              />
-            </SlideIn>
-            <SlideIn direction="up" delay={0.5}>
-              <ServiceCard
-                icon={GraduationCap}
-                title="Educación Física"
-                description="Administración y gestión de la educación física escolar y comunitaria, formación de habilidades motoras."
-                href="/servicios/educacion-fisica"
-              />
-            </SlideIn>
-            
+          <div className="relative px-4 md:px-8">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <SlideIn direction="up" delay={0.1}>
+                    <ServiceCard
+                      icon={Briefcase}
+                      title="Administración Deportiva"
+                      description="Planeación estratégica, liderazgo, marketing social del deporte y asesorías a empresas deportivas."
+                      href="/servicios/administracion-deportiva"
+                    />
+                  </SlideIn>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <SlideIn direction="up" delay={0.2}>
+                    <ServiceCard
+                      icon={Dumbbell}
+                      title="Servicios Deportivos"
+                      description="Capacitación en entrenamiento deportivo, monitores deportivos, entrenadores y turismo deportivo."
+                      href="/servicios/servicios-deportivos"
+                    />
+                  </SlideIn>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <SlideIn direction="up" delay={0.3}>
+                    <ServiceCard
+                      icon={Users}
+                      title="Servicios Recreativos"
+                      description="Organización de eventos recreativos, caminatas ecológicas, campamentos juveniles y familiares."
+                      href="/servicios/servicios-recreativos"
+                    />
+                  </SlideIn>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <SlideIn direction="up" delay={0.4}>
+                    <ServiceCard
+                      icon={Award}
+                      title="Actividad Física"
+                      description="Pausas activas empresariales, actividad física para adultos y acondicionamiento físico."
+                      href="/servicios/actividad-fisica"
+                    />
+                  </SlideIn>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <SlideIn direction="up" delay={0.5}>
+                    <ServiceCard
+                      icon={GraduationCap}
+                      title="Educación Física"
+                      description="Administración y gestión de la educación física escolar y comunitaria, formación de habilidades motoras."
+                      href="/servicios/educacion-fisica"
+                    />
+                  </SlideIn>
+                </CarouselItem>
+              </CarouselContent>
+              <div className="flex items-center justify-center gap-2 mt-6">
+                <CarouselPrevious className="static translate-y-0" />
+                <CarouselNext className="static translate-y-0" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>

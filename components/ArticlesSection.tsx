@@ -5,6 +5,17 @@ import { useAnimation } from "./animation-provider";
 export function ArticlesSection() {
   const { FadeIn, SlideIn } = useAnimation();
 
+  // Determinar el número de columnas basado en la cantidad de artículos
+  const getGridCols = () => {
+    if (articles.length <= 2) {
+      return "grid-cols-1 md:grid-cols-3";
+    } else if (articles.length <= 3) {
+      return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
+    } else {
+      return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
+    }
+  };
+
   return (
     <section className="py-16 md:py-24 bg-[#F8F9FA]">
       <div className="container px-4 md:px-6">
@@ -20,7 +31,7 @@ export function ArticlesSection() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className={`grid ${getGridCols()} gap-4`}>
           {articles.map((article, index) => (
             <SlideIn key={article.id} direction="up" delay={0.1 * (index + 1)}>
               <ArticleCard
