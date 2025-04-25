@@ -139,7 +139,7 @@ export default function BannerSlider() {
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white p-4">
             <h1 className="text-3xl md:text-5xl font-bold mb-4">{slide.title}</h1>
             <p className="text-lg md:text-xl max-w-2xl mb-8">{slide.description}</p>
-            <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+            <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
               <a href={slide.buttonLink}>{slide.buttonText}</a>
             </Button>
           </div>

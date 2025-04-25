@@ -30,7 +30,7 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
               Nuestros Servicios
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -166,7 +166,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-[#F8F9FA]">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
               Sobre Nosotros
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -180,7 +180,7 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <ScaleIn>
               <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+                <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
                   Nuestra Misión
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -193,7 +193,7 @@ export default function Home() {
             </ScaleIn>
             <SlideIn direction="right">
               <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+                <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
                   Nuestra Visión
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -212,7 +212,7 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
               Nuestros Servicios
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -298,7 +298,7 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
               Escenarios Deportivos
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -379,7 +379,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center mt-8">
-            <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+            <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
               <Link href="/escenarios-deportivos">Ver todos los escenarios</Link>
             </Button>
           </div>
@@ -390,7 +390,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-[#F8F9FA]">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
               Nuestros Clientes
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -418,7 +418,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center mt-8">
-            <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+            <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
               <Link href="/clientes">Ver todos los clientes</Link>
             </Button>
           </div>
@@ -426,7 +426,7 @@ export default function Home() {
       </section>
 
       {/* Formación */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#5E308C] to-[#0F8DBF] text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-[#0B8CBF] to-[#0F8DBF] text-white">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <SlideIn direction="left">
@@ -456,7 +456,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <div className="pt-4">
-                  <Button asChild className="bg-white text-[#5E308C] hover:bg-white/90">
+                  <Button asChild className="bg-white text-[#0B8CBF] hover:bg-white/90">
                     <Link href="/formacion">Ver programas</Link>
                   </Button>
                 </div>
@@ -481,7 +481,7 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">Contacto</div>
+            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">Contacto</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               ¿Necesitas nuestros servicios?
             </h2>
@@ -490,7 +490,7 @@ export default function Home() {
               personalizada.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+              <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
                 <Link href="/contacto">Contactar ahora</Link>
               </Button>
               <Button asChild variant="outline">

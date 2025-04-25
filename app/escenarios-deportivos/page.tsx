@@ -153,7 +153,7 @@ export default function EscenariosDeportivos() {
 
   return (
     <div>
-      <section className="bg-[#5E308C] py-16 md:py-24 text-white">
+      <section className="bg-[#0B8CBF] py-16 md:py-24 text-white">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Escenarios Deportivos</h1>
@@ -214,7 +214,7 @@ export default function EscenariosDeportivos() {
                   </div>
                   <CardContent className="p-6">
                     <div className="mb-2">
-                      <span className="inline-block bg-[#5E308C]/10 text-[#5E308C] text-xs font-medium rounded-full px-2.5 py-0.5 capitalize">
+                      <span className="inline-block bg-[#0B8CBF]/10 text-[#0B8CBF] text-xs font-medium rounded-full px-2.5 py-0.5 capitalize">
                         {instalacion.tipo}
                       </span>
                     </div>
@@ -237,7 +237,7 @@ export default function EscenariosDeportivos() {
                     <div className="mt-4 pt-4 border-t">
                       <div className="flex justify-between items-center">
                         <span className="font-bold">{instalacion.precio}</span>
-                        <Button asChild size="sm" className="bg-[#5E308C] hover:bg-[#5357A6]">
+                        <Button asChild size="sm" className="bg-[#0B8CBF] hover:bg-[#5357A6]">
                           <Link href={`/escenarios-deportivos/${instalacion.id}`}>Ver detalles</Link>
                         </Button>
                       </div>
@@ -276,7 +276,7 @@ export default function EscenariosDeportivos() {
                   </li>
                 </ul>
                 <div className="pt-4">
-                  <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+                  <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
                     <Link href="/contacto">Promocionar mi instalación</Link>
                   </Button>
                 </div>

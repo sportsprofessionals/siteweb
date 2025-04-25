@@ -16,8 +16,8 @@ export default function ServiceCard({ icon: Icon, title, description, href, clas
     <Link href={href}>
       <Card className={cn("h-full transition-all hover:shadow-lg", className)}>
         <CardHeader>
-          <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[#5E308C]/10">
-            <Icon className="h-6 w-6 text-[#5E308C]" />
+          <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[#0B8CBF]/10">
+            <Icon className="h-6 w-6 text-[#0B8CBF]" />
           </div>
           <CardTitle className="text-xl">{title}</CardTitle>
         </CardHeader>

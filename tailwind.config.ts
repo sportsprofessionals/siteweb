@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -26,11 +26,11 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#5E308C",
+          DEFAULT: "#0B8CBF",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#5357A6",
+          DEFAULT: "#0B8CBF",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -54,7 +54,7 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         unofit: {
-          purple: "#5E308C",
+          purple: "#0B8CBF",
           blue: "#5357A6",
           lightblue: "#0F8DBF",
           green: "#41A650",
@@ -83,6 +83,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

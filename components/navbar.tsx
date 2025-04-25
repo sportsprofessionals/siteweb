@@ -37,7 +37,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo1.png" alt="SPORTSPROFESSIONALS Logo" width={40} height={40} className="h-10 w-auto" />
-          <span className="text-xl font-bold text-[#5E308C]">SPORTSPROFESSIONALS</span>
+          <span className="text-xl font-bold text-[#0B8CBF]">SPORTSPROFESSIONALS</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -46,14 +46,15 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-[#0D0D0D] hover:text-[#5E308C] transition-colors"
+                className="text-sm font-medium text-[#0D0D0D] hover:text-[#0B8CBF] transition-colors"
               >
+                
                 {link.name}
               </Link>
             ) : (
               <DropdownMenu key={link.name}>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="text-sm font-medium text-[#0D0D0D] hover:text-[#5E308C]">
+                  <Button variant="ghost" className="text-sm font-medium text-[#0D0D0D] hover:text-[#0B8CBF]">
                     {link.name}
                   </Button>
                 </DropdownMenuTrigger>
@@ -81,7 +82,7 @@ export default function Navbar() {
             <div className="container flex h-16 items-center justify-between">
               <Link href="/" className="flex items-center gap-2">
                 <Image src="/logo.png" alt="SPORTSPROFESSIONALS Logo" width={40} height={40} className="h-10 w-auto" />
-                <span className="text-xl font-bold text-[#5E308C]">SPORTSPROFESSIONALS</span>
+                <span className="text-xl font-bold text-[#0B8CBF]">SPORTSPROFESSIONALS</span>
               </Link>
               <Button variant="outline" size="icon" onClick={() => setIsOpen(false)}>
                 <X className="h-5 w-5" />
@@ -94,7 +95,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-lg font-medium text-[#0D0D0D] hover:text-[#5E308C]"
+                    className="text-lg font-medium text-[#0D0D0D] hover:text-[#0B8CBF]"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
@@ -107,7 +108,7 @@ export default function Navbar() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="text-sm text-muted-foreground hover:text-[#5E308C]"
+                          className="text-sm text-muted-foreground hover:text-[#0B8CBF]"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}

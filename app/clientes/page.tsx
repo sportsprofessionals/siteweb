@@ -78,7 +78,7 @@ export default function Clientes() {
 
   return (
     <div>
-      <section className="bg-[#5E308C] py-16 md:py-24 text-white">
+      <section className="bg-[#0B8CBF] py-16 md:py-24 text-white">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestros Clientes</h1>
@@ -174,7 +174,7 @@ export default function Clientes() {
                   servicio de alta calidad que marca la diferencia en la gestión deportiva de nuestros clientes.
                 </p>
                 <div className="pt-4">
-                  <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+                  <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
                     <Link href="/contacto">Contactar ahora</Link>
                   </Button>
                 </div>
@@ -193,7 +193,7 @@ export default function Clientes() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#5E308C] to-[#0F8DBF] text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-[#0B8CBF] to-[#0F8DBF] text-white">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">¿Quieres compartir tu experiencia?</h2>
@@ -202,7 +202,7 @@ export default function Clientes() {
               Contacta con nosotros para incluir tu testimonio en nuestra página.
             </p>
             <div className="pt-4">
-              <Button asChild className="bg-white text-[#5E308C] hover:bg-white/90">
+              <Button asChild className="bg-white text-[#0B8CBF] hover:bg-white/90">
                 <Link href="/contacto">Compartir mi experiencia</Link>
               </Button>
             </div>

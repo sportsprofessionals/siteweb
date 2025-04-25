@@ -51,7 +51,7 @@ export default function Contacto() {
 
   return (
     <div>
-      <section className="bg-[#5E308C] py-16 md:py-24 text-white">
+      <section className="bg-[#0B8CBF] py-16 md:py-24 text-white">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contacto</h1>
@@ -135,7 +135,7 @@ export default function Contacto() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-[#5E308C] hover:bg-[#5357A6]" disabled={isSubmitting}>
+                <Button type="submit" className="w-full bg-[#0B8CBF] hover:bg-[#5357A6]" disabled={isSubmitting}>
                   {isSubmitting ? "Enviando..." : "Enviar mensaje"}
                 </Button>
               </form>
@@ -146,8 +146,8 @@ export default function Contacto() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#5E308C]/10 p-3 rounded-full">
-                    <MapPin className="h-6 w-6 text-[#5E308C]" />
+                  <div className="bg-[#0B8CBF]/10 p-3 rounded-full">
+                    <MapPin className="h-6 w-6 text-[#0B8CBF]" />
                   </div>
                   <div>
                     <h3 className="font-medium text-lg">Dirección</h3>
@@ -156,8 +156,8 @@ export default function Contacto() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#5E308C]/10 p-3 rounded-full">
-                    <Phone className="h-6 w-6 text-[#5E308C]" />
+                  <div className="bg-[#0B8CBF]/10 p-3 rounded-full">
+                    <Phone className="h-6 w-6 text-[#0B8CBF]" />
                   </div>
                   <div>
                     <h3 className="font-medium text-lg">Teléfono</h3>
@@ -166,8 +166,8 @@ export default function Contacto() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#5E308C]/10 p-3 rounded-full">
-                    <Mail className="h-6 w-6 text-[#5E308C]" />
+                  <div className="bg-[#0B8CBF]/10 p-3 rounded-full">
+                    <Mail className="h-6 w-6 text-[#0B8CBF]" />
                   </div>
                   <div>
                     <h3 className="font-medium text-lg">Correo electrónico</h3>

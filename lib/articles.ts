@@ -125,4 +125,79 @@ Por consiguiente, desde el punto de vista fisiológico, las niñas maduran aprox
 
 [IMAGEN: FOTO EDUCACION FISICA ESCOLAR]`,
   },
+  {
+    id: "estilo-vida-salud",
+    title:
+      "Estilo de Vida, Salud y Calidad de Vida: El Impacto de la Actividad Física en la Sociedad Contemporánea",
+    summary:
+      "Explora cómo la actividad física puede contrarrestar los efectos negativos del sedentarismo en la sociedad moderna, destacando estrategias y beneficios clave.",
+    author:
+      "Hoeger, W. K., & Hoeger, S. A. (2005). Ejercicio y salud. Thomson.",
+    imageUrl: "/actividad-fisica-sociedad.jpg",
+    sport: "Salud y Estilo de Vida",
+    content: `Los profesionales de las ciencias médicas han concluido que la inactividad física y los hábitos de vida nocivos representan factores de riesgo críticos para la salud global. En un contexto donde el avance tecnológico ha minimizado la necesidad de movimiento en las actividades cotidianas, la actividad física se ha convertido en un elemento indispensable para contrarrestar lo que expertos como Werner (2005) denominan el "síndrome de muerte por sedentarismo" (SMS). Según este autor, este fenómeno constituye la segunda mayor amenaza para la salud pública en Estados Unidos, destacando su impacto epidemiológico.
+
+La paradoja del progreso: tecnología vs. movimiento humano
+Los avances tecnológicos, si bien han optimizado procesos cotidianos, han generado un efecto colateral alarmante: la reducción sistemática de la actividad física espontánea. Esta transformación ha propiciado el incremento de enfermedades crónicas asociadas al sedentarismo, entre las que destacan:
+
+- Hipertensión arterial
+- Cardiopatías
+- Obesidad
+- Lumbalgias crónicas
+
+Estos padecimientos, clasificados como enfermedades hipocinéticas (del griego hipo = bajo, kinético = movimiento), se caracterizan por desarrollarse progresivamente y mantenerse durante años, siendo responsables del 71% de las muertes globales según la OMS (2015).
+
+Actividad física vs. ejercicio: precisiones conceptuales
+Es crucial diferenciar dos términos frecuentemente confundidos:
+
+- Actividad física: Movimiento corporal producido por la musculatura esquelética que demanda gasto energético y genera beneficios sistémicos para la salud.
+- Ejercicio: Variante estructurada de actividad física, caracterizada por su planificación, repetición y objetivo específico de mejorar componentes de la condición física (resistencia, fuerza, flexibilidad).
+
+Mientras la primera incluye acciones cotidianas como caminar o subir escaleras, el ejercicio requiere intencionalidad terapéutica o deportiva.
+
+Estrategias para un nuevo paradigma de salud
+Frente a este escenario, se propone:
+
+1. **Programas de intervención multinivel**: Diseñados por profesionales de educación física, entrenadores y gestores deportivos para adaptarse a necesidades individuales y grupales.
+2. **Sinergia con políticas públicas**: Integración de planos de movilidad urbana, espacios deportivos accesibles y educación nutricional.
+3. **Combate a los "triples demonios" modernos**:
+   - Nutrición desequilibrada: Consumo excesivo de grasas trans, azúcares simples y alcohol.
+   - Estrés crónico: Asociado a patologías inmunológicas y metabólicas.
+   - Degradación ambiental: Contaminación atmosférica, acústica y residuos tóxicos.
+
+Hacia una rehumanización del movimiento.
+Instituciones como el ACSM (Colegio Americano de Medicina Deportiva) recomiendan un mínimo de 150 minutos semanales de actividad aeróbica moderada. Sin embargo, más allá de cifras, se requiere un cambio cultural que revalorice el movimiento como pilar de la existencia humana, equilibrando las comodidades tecnológicas con la preservación de nuestra biología evolutiva.
+
+**GLOSARIO DE TÉRMINOS CLAVE**
+- **Síndrome de Muerte por Sedentarismo (SMS)**: Término epidemiológico para muertes atribuibles a inactividad física.
+- **Enfermedades Hipocinéticas**: Patologías vinculadas a déficit de movimiento (diabetes tipo 2, osteoporosis).
+- **Ejercicio Terapéutico**: Prescripción médica de actividad estructurada para manejo de enfermedades.
+
+`,
+  },
+  {
+    id: "recreacion-deporte-recreativo",
+    title: "Recreación y Deporte Recreativo: Una Mirada desde el Tiempo Libre",
+    summary:
+      "Explora cómo la recreación y el deporte recreativo promueven el bienestar, la inclusión y el disfrute personal en el tiempo libre.",
+    author:
+      "Castellanos H, Eulogio, Turismo y recreación bases teóricas, conceptuales y operativas. Edit, Trillas, 2018.",
+    imageUrl: "/recreacion-deporte.jpg",
+    sport: "Recreación y Deporte",
+    content: `Según Castellano (2018), citando a Harry Overstreet (en Pérez y cols.), la recreación se concibe como el desenvolvimiento placentero y espontáneo del ser humano durante su tiempo libre. Esta actividad busca satisfacer necesidades psicoespirituales tales como el descanso, el entretenimiento, la expresión personal, la aventura y la socialización. En esta definición se destaca la importancia de la libertad de elección y del goce subjetivo como elementos centrales de la experiencia recreativa.
+
+Por su parte, Pérez y cols. (1997) amplían el concepto al definir la recreación como el conjunto de fenómenos y relaciones que emergen del aprovechamiento del tiempo libre a través de actividades con propósitos terapéuticos, preventivos, cognitivos, deportivos o artístico-culturales. Lo fundamental en esta perspectiva es la ausencia de compulsión externa, lo que permite a las personas involucrarse de forma voluntaria y con sentido de disfrute.
+
+Desde estas aproximaciones puede inferirse que las actividades recreativas comprenden una amplia gama de posibilidades, entre las cuales se destaca el deporte recreativo, en tanto promueve la participación lúdica y placentera en actividades físicas y deportivas. Su propósito fundamental es el goce y la satisfacción personal, alejándose de los fines estrictamente competitivos o de rendimiento profesional.
+
+Es importante hacer una distinción entre deporte recreativo y deporte profesional. Aunque ambos comparten elementos físicos y estructurales, difieren en sus objetivos y contextos. No sería adecuado considerar como actividad de ocio el entrenamiento de un futbolista profesional antes de un campeonato o la práctica obligada de un integrante del equipo nacional de tenis que se prepara para una competencia internacional. En estos casos, la participación está mediada por una exigencia externa, planificación estructurada y resultados esperados, lo cual desvirtúa el carácter voluntario y placentero propio de la recreación.
+
+En cambio, el deporte recreativo combina características del deporte y del ocio: implica la participación activa y física, pero en un marco de elección libre, sin presiones externas ni metas de alto rendimiento. Aquí, los individuos deciden voluntariamente jugar un partido, correr una carrera o participar en una competencia local, priorizando la experiencia personal sobre la victoria o la competencia.
+
+Los profesionales del área de la recreación deportiva tienen un papel fundamental en la promoción de programas accesibles y atractivos para diversos públicos: pueden desarrollar propuestas para clubes juveniles, diseñar actividades inclusivas para adultos mayores, organizar campeonatos locales, festivales deportivos o eventos comunitarios.
+
+No obstante, el enfoque filosófico del deporte recreativo prioriza la inclusión, el bienestar y la participación sobre la competencia, promoviendo un estilo de vida activo y saludable para la mayor cantidad de personas posible.
+
+`,
+  },
 ];

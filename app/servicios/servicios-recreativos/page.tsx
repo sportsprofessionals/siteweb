@@ -11,7 +11,7 @@ export default function ServiciosRecreativos() {
 
   return (
     <div>
-      <section className="bg-[#5E308C] py-16 md:py-24 text-white">
+      <section className="bg-[#0B8CBF] py-16 md:py-24 text-white">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Servicios Recreativos</h1>
@@ -109,7 +109,7 @@ export default function ServiciosRecreativos() {
                 </ul>
 
                 <div className="pt-6">
-                  <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+                  <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
                     <Link href="/contacto">Solicitar información</Link>
                   </Button>
                 </div>
@@ -233,7 +233,7 @@ export default function ServiciosRecreativos() {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
               ¿Necesitas nuestros servicios recreativos?
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -244,7 +244,7 @@ export default function ServiciosRecreativos() {
               experiencias recreativas memorables.
             </p>
             <div className="pt-4">
-              <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+              <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
                 <Link href="/contacto">Solicitar información</Link>
               </Button>
             </div>

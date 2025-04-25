@@ -10,7 +10,7 @@ export default function RecreacionPage() {
   return (
     <div className="container py-16 md:py-24">
       <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-        <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+        <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
           Recreación
         </div>
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">

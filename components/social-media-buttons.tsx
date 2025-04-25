@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export default function SocialMediaButtons() {
   const openInstagram = () => {
-    window.open("https://www.instagram.com/sportsprofessionals", "_blank")
+    window.open("https://www.instagram.com/sports_professionals_col?igsh=cG5scWJyYWlxamN4&utm_source=qr", "_blank")
   }
 
   const openFacebook = () => {

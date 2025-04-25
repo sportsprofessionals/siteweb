@@ -269,7 +269,7 @@ export default function EscenarioDetalle() {
 
   return (
     <div>
-      <section className="bg-[#5E308C] py-16 md:py-24 text-white">
+      <section className="bg-[#0B8CBF] py-16 md:py-24 text-white">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <Button
@@ -310,7 +310,7 @@ export default function EscenarioDetalle() {
                     <button
                       key={idx}
                       className={`relative aspect-video rounded-md overflow-hidden border-2 ${
-                        imagenActiva === idx ? "border-[#5E308C]" : "border-transparent"
+                        imagenActiva === idx ? "border-[#0B8CBF]" : "border-transparent"
                       }`}
                       onClick={() => setImagenActiva(idx)}
                     >
@@ -368,7 +368,7 @@ export default function EscenarioDetalle() {
                 </div>
 
                 <div className="pt-4">
-                  <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6] w-full">
+                  <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6] w-full">
                     <a href={`tel:${instalacion.telefono}`}>Contactar ahora</a>
                   </Button>
                 </div>
@@ -409,7 +409,7 @@ export default function EscenarioDetalle() {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
               ¿Te interesa esta instalación?
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Reserva ahora</h2>
@@ -417,7 +417,7 @@ export default function EscenarioDetalle() {
               Contacta directamente con la instalación para consultar disponibilidad y realizar tu reserva.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+              <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
                 <a href={`tel:${instalacion.telefono}`}>Llamar</a>
               </Button>
               <Button asChild variant="outline">

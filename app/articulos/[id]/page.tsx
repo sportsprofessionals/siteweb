@@ -25,86 +25,198 @@ export default function ArticlePage() {
   }
 
   const renderContent = () => {
-    return article.content.split("\n").map((paragraph, index) => {
-      // Si el párrafo contiene una imagen
+    let inList = false;
+    let inGlossary = false;
+    const result = [];
+    let listItems = [];
+
+    article.content.split("\n").forEach((paragraph, index) => {
+      // Check if this is a GLOSARIO section
+      if (paragraph.includes("**GLOSARIO DE TÉRMINOS CLAVE**") || paragraph.includes("**GLOSARIO")) {
+        inGlossary = true;
+        result.push(
+          <h2 key={`glossary-${index}`} className="text-2xl font-bold mt-12 mb-6 text-[#0B8CBF]">
+            {formatText(paragraph.replace(/\*\*/g, ""))}
+          </h2>
+        );
+        return;
+      }
+
+      // Handle glossary items
+      if (inGlossary && paragraph.startsWith("- **")) {
+        const match = paragraph.match(/- \*\*(.*?)\*\*: (.*)/);
+        if (match) {
+          const term = match[1];
+          const definition = match[2];
+          result.push(
+            <div key={`glossary-item-${index}`} className="mb-4">
+              <dt className="font-semibold text-[#0B8CBF]">{term}</dt>
+              <dd className="ml-4 text-muted-foreground">{definition}</dd>
+            </div>
+          );
+        }
+        return;
+      }
+
+      // Handle images - Enhanced version with more image type detection
       if (paragraph.includes("[IMAGEN:")) {
         const imageType = paragraph.match(/\[IMAGEN: (.*?)\]/)?.[1] || "";
         let imageName = "";
 
-        // Determinar el nombre del archivo de imagen basado en el tipo
+        // Extended image mapping with more specific checks
         if (imageType.includes("FUTBOL")) {
           imageName = "futbol.jpg";
-        } else if (imageType.includes("TENNIS")) {
+        } else if (imageType.includes("TENNIS") || imageType.includes("TENIS")) {
           imageName = "tenis.jpg";
         } else if (imageType.includes("VOLEIBOL")) {
           imageName = "voleibol.jpg";
-        } else if (imageType.includes("NADADORES")) {
+        } else if (imageType.includes("NADADORES") || imageType.includes("NATACION")) {
           imageName = "natacion.jpg";
         } else if (imageType.includes("BALONCESTO")) {
           imageName = "baloncesto.jpg";
+        } else if (imageType.includes("EDUCACION FISICA") || imageType.includes("ESCOLAR")) {
+          imageName = "educacion-fisica.jpg";
+        } else {
+          // Default to article main image if specific type not found
+          imageName = article.imageUrl.split('/').pop() || "default.jpg";
         }
 
-        return (
-          <div key={index} className="my-6">
+        result.push(
+          <div key={`image-${index}`} className="my-6">
             <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden">
               <Image
-                src={`/articles/${imageName}`}
-                alt={imageType}
+                src={imageName.startsWith('/') ? imageName : `/articles/${imageName}`}
+                alt={imageType || "Imagen ilustrativa"}
                 fill
                 className="object-cover"
               />
             </div>
+            <p className="text-sm text-center text-muted-foreground mt-2">
+              {imageType || "Imagen ilustrativa"}
+            </p>
           </div>
         );
+        return;
       }
 
-      // Si es un subtítulo (contiene "Ejemplo aplicado")
+      // Handle subheadings
       if (paragraph.includes("Ejemplo aplicado")) {
-        return (
-          <h3 key={index} className="text-xl font-semibold mt-8 mb-4 text-[#5E308C]">
+        result.push(
+          <h3 key={`subheading-${index}`} className="text-xl font-semibold mt-8 mb-4 text-[#0B8CBF]">
             {formatText(paragraph)}
           </h3>
         );
+        return;
       }
 
-      // Si es una línea horizontal
+      // Handle section titles (all caps text)
+      if (paragraph.trim() === paragraph.trim().toUpperCase() && paragraph.trim().length > 3) {
+        result.push(
+          <h3 key={`section-${index}`} className="text-xl font-semibold mt-8 mb-4 text-[#0B8CBF]">
+            {formatText(paragraph)}
+          </h3>
+        );
+        return;
+      }
+
+      // Handle horizontal lines
       if (paragraph.trim() === "---") {
-        return <hr key={index} className="my-8 border-gray-200" />;
+        result.push(<hr key={`hr-${index}`} className="my-8 border-gray-200" />);
+        return;
       }
 
-      // Si es un párrafo normal
-      return (
-        <p key={index} className="text-justify text-muted-foreground mb-4">
-          {formatText(paragraph)}
-        </p>
-      );
+      // Handle list items
+      if (paragraph.trim().startsWith("-") || paragraph.trim().startsWith("*") || paragraph.trim().match(/^\d+\./)) {
+        if (!inList) {
+          inList = true;
+          listItems = [];
+        }
+        
+        // Clean up the list item text, removing markdown formatting
+        const itemText = paragraph.trim()
+          .replace(/^-\s+/, '')
+          .replace(/^\*\s+/, '')
+          .replace(/^\d+\.\s+/, '')
+          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+          .trim();
+        
+        listItems.push(
+          <li 
+            key={`list-item-${index}`} 
+            className="ml-6 mb-2 text-muted-foreground"
+            dangerouslySetInnerHTML={{ __html: itemText }}
+          />
+        );
+        return;
+      }
+
+      // If we were in a list but now we're not, add the completed list to results
+      if (inList && !paragraph.trim().startsWith("-") && !paragraph.trim().startsWith("*") && !paragraph.trim().match(/^\d+\./)) {
+        inList = false;
+        result.push(
+          <ul key={`list-${index}`} className="my-4 list-disc">
+            {listItems}
+          </ul>
+        );
+      }
+
+      // Handling section headings with colons
+      if (paragraph.includes(":") && !paragraph.includes("**") && paragraph.length < 100) {
+        const parts = paragraph.split(":");
+        if (parts.length === 2 && parts[0].trim().length > 0) {
+          result.push(
+            <h3 key={`section-${index}`} className="text-xl font-semibold mt-8 mb-4 text-[#0B8CBF]">
+              {formatText(paragraph)}
+            </h3>
+          );
+          return;
+        }
+      }
+
+      // Handle formatted text with bold markers
+      if (paragraph.includes("**")) {
+        const formattedText = formatText(paragraph).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        result.push(
+          <p 
+            key={`paragraph-${index}`} 
+            className="text-justify text-muted-foreground mb-4"
+            dangerouslySetInnerHTML={{ __html: formattedText }}
+          />
+        );
+        return;
+      }
+
+      // Regular paragraphs
+      if (paragraph.trim().length > 0) {
+        result.push(
+          <p key={`paragraph-${index}`} className="text-justify text-muted-foreground mb-4">
+            {formatText(paragraph)}
+          </p>
+        );
+      }
     });
+
+    // If we ended while still in a list, add the final list
+    if (inList && listItems.length > 0) {
+      result.push(
+        <ul key="final-list" className="my-4 list-disc">
+          {listItems}
+        </ul>
+      );
+    }
+
+    return result;
   };
 
   return (
     <div className="container py-16 md:py-24">
       <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-        <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+        <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
           {article.sport}
         </div>
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
           {article.title}
         </h1>
-        <div className="flex flex-col items-center gap-2">
-          <p className="text-muted-foreground md:text-lg">
-            Por {article.author}
-          </p>
-          <div className="flex items-center gap-2">
-            <span className="text-muted-foreground md:text-lg">Adaptado por Sportsprofessionals</span>
-            <Image
-              src="/logo1.png"
-              alt="Sportsprofessionals"
-              width={120}
-              height={30}
-              className="h-6 w-auto"
-            />
-          </div>
-        </div>
       </FadeIn>
 
       <div className="max-w-3xl mx-auto">
@@ -120,7 +232,26 @@ export default function ArticlePage() {
         <div className="prose prose-lg max-w-none">
           {renderContent()}
         </div>
+        
+        {/* Author and adaptation information moved here, below the article content */}
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="flex flex-col items-center gap-4 text-center">
+            <p className="text-muted-foreground md:text-lg">
+              Por {article.author}
+            </p>
+            <div className="flex items-center gap-2">
+              <span className="text-muted-foreground md:text-lg">Adaptado por Sportsprofessionals</span>
+              <Image
+                src="/logo1.png"
+                alt="Sportsprofessionals"
+                width={120}
+                height={30}
+                className="h-6 w-auto"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
-} 
+}

@@ -11,7 +11,7 @@ export default function Formacion() {
 
   return (
     <div>
-      <section className="bg-[#5E308C] py-16 md:py-24 text-white">
+      <section className="bg-[#0B8CBF] py-16 md:py-24 text-white">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Formación</h1>
@@ -68,7 +68,7 @@ export default function Formacion() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <SlideIn direction="up" delay={0.1}>
               <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 h-full">
-                <GraduationCap className="h-10 w-10 text-[#5E308C] mb-4" />
+                <GraduationCap className="h-10 w-10 text-[#0B8CBF] mb-4" />
                 <h3 className="text-xl font-bold mb-3">Gestión Deportiva Avanzada</h3>
                 <p className="text-muted-foreground mb-4">
                   Programa completo para profesionales que buscan mejorar sus habilidades en la gestión de
@@ -84,14 +84,14 @@ export default function Formacion() {
                     <span>Dirigido a: Gestores deportivos y directores</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-[#5E308C] hover:bg-[#5357A6]">
+                <Button asChild className="w-full bg-[#0B8CBF] hover:bg-[#5357A6]">
                   <Link href="/contacto">Solicitar información</Link>
                 </Button>
               </div>
             </SlideIn>
             <SlideIn direction="up" delay={0.2}>
               <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 h-full">
-                <Building className="h-10 w-10 text-[#5E308C] mb-4" />
+                <Building className="h-10 w-10 text-[#0B8CBF] mb-4" />
                 <h3 className="text-xl font-bold mb-3">Dirección de Instalaciones Deportivas</h3>
                 <p className="text-muted-foreground mb-4">
                   Formación especializada en la gestión eficiente de instalaciones y centros deportivos.
@@ -106,14 +106,14 @@ export default function Formacion() {
                     <span>Dirigido a: Directores y gerentes de instalaciones</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-[#5E308C] hover:bg-[#5357A6]">
+                <Button asChild className="w-full bg-[#0B8CBF] hover:bg-[#5357A6]">
                   <Link href="/contacto">Solicitar información</Link>
                 </Button>
               </div>
             </SlideIn>
             <SlideIn direction="up" delay={0.3}>
               <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 h-full">
-                <BookOpen className="h-10 w-10 text-[#5E308C] mb-4" />
+                <BookOpen className="h-10 w-10 text-[#0B8CBF] mb-4" />
                 <h3 className="text-xl font-bold mb-3">Marketing Deportivo</h3>
                 <p className="text-muted-foreground mb-4">
                   Estrategias de marketing y comunicación específicas para el sector deportivo.
@@ -128,14 +128,14 @@ export default function Formacion() {
                     <span>Dirigido a: Profesionales de marketing y comunicación</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-[#5E308C] hover:bg-[#5357A6]">
+                <Button asChild className="w-full bg-[#0B8CBF] hover:bg-[#5357A6]">
                   <Link href="/contacto">Solicitar información</Link>
                 </Button>
               </div>
             </SlideIn>
             <SlideIn direction="up" delay={0.4}>
               <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 h-full">
-                <Award className="h-10 w-10 text-[#5E308C] mb-4" />
+                <Award className="h-10 w-10 text-[#0B8CBF] mb-4" />
                 <h3 className="text-xl font-bold mb-3">Planificación de Eventos Deportivos</h3>
                 <p className="text-muted-foreground mb-4">
                   Organización y gestión de eventos deportivos de diferentes escalas.
@@ -150,14 +150,14 @@ export default function Formacion() {
                     <span>Dirigido a: Organizadores de eventos y técnicos deportivos</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-[#5E308C] hover:bg-[#5357A6]">
+                <Button asChild className="w-full bg-[#0B8CBF] hover:bg-[#5357A6]">
                   <Link href="/contacto">Solicitar información</Link>
                 </Button>
               </div>
             </SlideIn>
             <SlideIn direction="up" delay={0.5}>
               <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 h-full">
-                <Users className="h-10 w-10 text-[#5E308C] mb-4" />
+                <Users className="h-10 w-10 text-[#0B8CBF] mb-4" />
                 <h3 className="text-xl font-bold mb-3">Gestión de Recursos Humanos en el Deporte</h3>
                 <p className="text-muted-foreground mb-4">
                   Estrategias para la gestión eficiente del personal en organizaciones deportivas.
@@ -172,14 +172,14 @@ export default function Formacion() {
                     <span>Dirigido a: Responsables de RRHH y directores</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-[#5E308C] hover:bg-[#5357A6]">
+                <Button asChild className="w-full bg-[#0B8CBF] hover:bg-[#5357A6]">
                   <Link href="/contacto">Solicitar información</Link>
                 </Button>
               </div>
             </SlideIn>
             <SlideIn direction="up" delay={0.6}>
               <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 h-full">
-                <GraduationCap className="h-10 w-10 text-[#5E308C] mb-4" />
+                <GraduationCap className="h-10 w-10 text-[#0B8CBF] mb-4" />
                 <h3 className="text-xl font-bold mb-3">Formación a Medida</h3>
                 <p className="text-muted-foreground mb-4">
                   Programas personalizados adaptados a las necesidades específicas de tu organización.
@@ -194,7 +194,7 @@ export default function Formacion() {
                     <span>Dirigido a: Organizaciones deportivas</span>
                   </li>
                 </ul>
-                <Button asChild className="w-full bg-[#5E308C] hover:bg-[#5357A6]">
+                <Button asChild className="w-full bg-[#0B8CBF] hover:bg-[#5357A6]">
                   <Link href="/contacto">Solicitar información</Link>
                 </Button>
               </div>
@@ -222,7 +222,7 @@ export default function Formacion() {
                   sus conocimientos y mejores prácticas.
                 </p>
                 <div className="pt-4">
-                  <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+                  <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
                     <Link href="/contacto">Solicitar información</Link>
                   </Button>
                 </div>
@@ -245,7 +245,7 @@ export default function Formacion() {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="inline-block rounded-lg bg-[#5E308C]/10 px-3 py-1 text-sm text-[#5E308C]">
+            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
               Formación Personalizada
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -256,7 +256,7 @@ export default function Formacion() {
               organización.
             </p>
             <div className="pt-4">
-              <Button asChild className="bg-[#5E308C] hover:bg-[#5357A6]">
+              <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
                 <Link href="/contacto">Contactar ahora</Link>
               </Button>
             </div>

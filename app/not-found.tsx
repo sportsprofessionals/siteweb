@@ -34,7 +34,7 @@ export default function NotFound() {
         Serás redirigido a la página principal en 10 segundos.
       </p>
       <div className="flex gap-4">
-        <Button asChild size="lg" className="bg-[#5E308C] hover:bg-[#5E308C]/90">
+        <Button asChild size="lg" className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90">
           <Link href="/">Volver al inicio</Link>
         </Button>
         <Button asChild variant="outline" size="lg">
