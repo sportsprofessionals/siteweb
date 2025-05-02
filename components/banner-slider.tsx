@@ -30,14 +30,14 @@ const slides: Slide[] = [
     buttonLink: "/servicios/educacion-fisica",
   },
   {
-    image: "/actividad-fisica.jpg",
+    image: "/actividad-fisica.png",
     title: "Actividad Física",
     description: "Programas personalizados para mejorar la salud y el bienestar",
     buttonText: "Explorar",
     buttonLink: "/servicios/actividad-fisica",
   },
   {
-    image: "/Deporte.jpg",
+    image: "/Deporte.png",
     title: "Deporte",
     description: "Alto rendimiento, inclusión y desarrollo deportivo integral",
     buttonText: "Descubrir",

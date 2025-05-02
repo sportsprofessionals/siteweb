@@ -15,7 +15,7 @@ export const articles: Article[] = [
     summary:
       "Descubre los principios fundamentales que rigen el entrenamiento deportivo, incluyendo individualidad, especificidad, reversibilidad y sobrecarga progresiva.",
     author: "Larry Kenney, Jack H. Wilmore y David L. Costill",
-    imageUrl: "/entrenamiento-deportivo.jpg",
+    imageUrl: "/admin-deportiva.jpg",
     sport: "Entrenamiento Deportivo",
     content: `Las distintas formas de entrenamiento físico se rigen por una serie de principios generales fundamentados en la fisiología del ejercicio y del deporte. A continuación, presentamos los siguientes:
 
