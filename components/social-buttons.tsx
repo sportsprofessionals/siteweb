@@ -9,11 +9,11 @@ export default function SocialButtons() {
   }
 
   const openFacebook = () => {
-    window.open("https://www.facebook.com/sportsprofessionals", "_blank")
+    window.open("", "_blank")
   }
 
   const openLinkedIn = () => {
-    window.open("https://www.linkedin.com/company/sportsprofessionals", "_blank")
+    window.open("", "_blank")
   }
 
   return (
