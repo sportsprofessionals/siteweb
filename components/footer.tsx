@@ -17,7 +17,7 @@ export default function Footer() {
               servicios relacionados con la industria del deporte.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://facebook.com" className="hover:text-[#5357A6] transition-colors">
+              <Link href="https://www.facebook.com/profile.php?id=61575308113610" className="hover:text-[#5357A6] transition-colors">
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </Link>

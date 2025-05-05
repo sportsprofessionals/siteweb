@@ -151,7 +151,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg">Dirección</h3>
-                    <p className="text-muted-foreground">Calle Principal 123, Ciudad</p>
+                    <p className="text-muted-foreground">Calle 152B #72-91, Bogotá</p>
                   </div>
                 </div>
 
@@ -171,7 +171,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg">Correo electrónico</h3>
-                    <p className="text-muted-foreground">sportsprofessionals2024@gmail.com</p>
+                    <p className="text-muted-foreground">infosportsprofessionals@gmail.com                    </p>
                   </div>
                 </div>
               </div>

@@ -9,7 +9,7 @@ export default function SocialMediaButtons() {
   }
 
   const openFacebook = () => {
-    window.open("https://www.facebook.com/sportsprofessionals", "_blank")
+    window.open("https://www.facebook.com/profile.php?id=61575308113610", "_blank")
   }
 
   const openLinkedIn = () => {
