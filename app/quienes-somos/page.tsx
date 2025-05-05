@@ -33,7 +33,7 @@ export default function QuienesSomosPage() {
             <CardContent>
               <div className="space-y-4">
                 <p className="text-lg">
-                  Brindar soluciones integrales e innovadoras a nuestros clientes POR MEDIO de servicios especializados en administración deportiva, educación física, actividad física, deporte y recreación, QUE CONTRIBUYA EFECTIVAMENTE al desarrollo social y económico del país.
+                Brindar soluciones integrales e innovadoras a nuestros clientes por medio de servicios especializados en administración deportiva, educación física, actividad física, deporte y recreación, que contribuya efectivamente al desarrollo social y económico del país.
                 </p>
                 <div className="relative h-64 w-full overflow-hidden rounded-lg">
                   <Image
