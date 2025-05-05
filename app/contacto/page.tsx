@@ -151,7 +151,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg">Dirección</h3>
-                    <p className="text-muted-foreground">Calle 152B #72-91, Bogotá</p>
+                    <p className="text-muted-foreground">Calle 152B #72-91, Bogota D.C</p>
                   </div>
                 </div>
 
