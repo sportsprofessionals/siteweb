@@ -90,7 +90,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-2">
                 <MapPin size={18} className="shrink-0 mt-0.5 text-[#41A650]" />
-                <span>Calle Principal 123, Ciudad</span>
+                <span>Calle 152B #72-91</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={18} className="shrink-0 text-[#41A650]" />
@@ -98,7 +98,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={18} className="shrink-0 text-[#41A650]" />
-                <span>sportsprofessionals2024@gmail.com</span>
+                <span>infosportsprofessionals@gmail.com
+                </span>
               </li>
             </ul>
           </div>
