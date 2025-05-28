@@ -7,6 +7,8 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import SocialMediaButtons from "@/components/social-media-buttons"
 import { AnimationProvider } from "@/components/animation-provider"
+import GoogleAnalytics from "@/components/google-analytics"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -49,21 +51,26 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDCDWH43HE"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YDCDWH43HE');
-            `,
-          }}
-        />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YDCDWH43HE"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YDCDWH43HE', {
+              page_path: window.location.pathname,
+              send_page_view: true
+            });
+          `}
+        </Script>
+        
         <ThemeProvider>
           <AnimationProvider>
             <div className="flex min-h-screen flex-col">
@@ -71,6 +78,7 @@ export default function RootLayout({
               <main className="flex-1">{children}</main>
               <Footer />
               <SocialMediaButtons />
+              <GoogleAnalytics />
             </div>
           </AnimationProvider>
         </ThemeProvider>
