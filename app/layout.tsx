@@ -49,6 +49,18 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDCDWH43HE"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YDCDWH43HE');
+            `,
+          }}
+        />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
@@ -66,5 +78,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-import './globals.css'
