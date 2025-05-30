@@ -22,6 +22,7 @@ const navLinks = [
   },
   { name: "Quiénes Somos", href: "/quienes-somos" },
   { name: "Formación", href: "/formacion" },
+  { name: "Aliados Deportivos", href: "/aliados-deportivos" },
   /*
   { name: "Clientes", href: "/clientes" },
   { name: "Escenarios", href: "/escenarios-deportivos" },

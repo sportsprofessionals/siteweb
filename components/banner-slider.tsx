@@ -5,51 +5,72 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 interface Slide {
-  image: string
+  id: string
   title: string
   description: string
-  buttonText: string
-  buttonLink: string
+  image: string
+  href?: string
+  logo?: string
+  type?: string
 }
 
 const slides: Slide[] = [
   {
-    image: "/admin-deportiva.jpg",
+    id: "aliado-fenix",
+    title: "Nuevo Aliado Deportivo",
+    description: "Centro de Desarrollo Deportivo FENIX - Especializado en canchas de voleibol y baloncesto reglamentarias. Ubicado en Barrio Salazar Gómez.",
+    image: "/voley2.jpg",
+    href: "/aliados-deportivos/fenix",
+    logo: "/fenix-logo.jpg",
+    type: "aliado"
+  },
+  {
+    id: "aliado-medusas",
+    title: "Nuevo Aliado Deportivo", 
+    description: "Club Medusas - Club especializado en actividades subacuáticas que desarrolla sus actividades en el Complejo Acuático Simón Bolívar.",
+    image: "/medusas2.jpeg",
+    href: "/aliados-deportivos/medusas",
+    logo: "/medusas-logo.jpg",
+    type: "aliado"
+  },
+  {
+    id: "admin-deportiva",
     title: "Administración Deportiva",
-    description: "Planeación estratégica y liderazgo para el éxito de su organización deportiva",
-    buttonText: "Conocer más",
-    buttonLink: "/servicios/administracion-deportiva",
+    description: "Planeación estratégica, liderazgo, marketing social del deporte y asesorías a empresas deportivas.",
+    image: "/admin-deportiva-2.jpg",
+    href: "/servicios/administracion-deportiva",
   },
   {
-    image: "/educacion-fisica.jpg",
+    id: "educacion-fisica",
     title: "Educación Física",
-    description: "Formación y desarrollo de habilidades motoras para todas las edades",
-    buttonText: "Ver servicios",
-    buttonLink: "/servicios/educacion-fisica",
+    description: "Administración y gestión de la educación física escolar y comunitaria, formación de habilidades motoras.",
+    image: "/educacion-fisica-2.jpg",
+    href: "/servicios/educacion-fisica",
   },
   {
-    image: "/actividad-fisica.png",
+    id: "actividad-fisica",
     title: "Actividad Física",
-    description: "Programas personalizados para mejorar la salud y el bienestar",
-    buttonText: "Explorar",
-    buttonLink: "/servicios/actividad-fisica",
+    description: "Pausas activas empresariales, actividad física para adultos y acondicionamiento físico.",
+    image: "/actividad-fisica-2.jpg",
+    href: "/servicios/actividad-fisica",
   },
   {
-    image: "/Deporte.png",
+    id: "deporte",
     title: "Deporte",
-    description: "Alto rendimiento, inclusión y desarrollo deportivo integral",
-    buttonText: "Descubrir",
-    buttonLink: "/servicios/deporte",
+    description: "Capacitación en entrenamiento deportivo, monitores deportivos, entrenadores y turismo deportivo.",
+    image: "/deporte-2.jpg",
+    href: "/servicios/deporte",
   },
   {
-    image: "/recreacion.jpg",
+    id: "recreacion",
     title: "Recreación",
     description: "Experiencias activas y bienestar integral para empresas e instituciones",
-    buttonText: "Conocer más",
-    buttonLink: "/servicios/recreacion",
-  },
+    image: "/recreacion-2.jpg",
+    href: "/servicios/recreacion",
+  }
 ]
 
 export default function BannerSlider() {
@@ -112,6 +133,10 @@ export default function BannerSlider() {
     return () => clearInterval(interval)
   }, [])
 
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index)
+  }
+
   return (
     <div 
       className="relative h-[500px] md:h-[600px] overflow-hidden" 
@@ -122,7 +147,7 @@ export default function BannerSlider() {
     >
       {slides.map((slide, index) => (
         <div
-          key={index}
+          key={slide.id}
           className={cn(
             "absolute inset-0 transition-opacity duration-1000",
             index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none",
@@ -137,11 +162,76 @@ export default function BannerSlider() {
             priority={index === 0}
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white p-4">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">{slide.title}</h1>
-            <p className="text-lg md:text-xl max-w-2xl mb-8">{slide.description}</p>
-            <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
-              <a href={slide.buttonLink}>{slide.buttonText}</a>
-            </Button>
+            {slide.type === "aliado" ? (
+              <div className="container mx-auto px-6 md:px-8 lg:px-12">
+                <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+                  <div className="text-white space-y-6">
+                    <div className="inline-block bg-[#0B8CBF]/20 px-4 py-2 rounded-full text-sm font-medium text-white/90 mb-4">
+                      {slide.title}
+                    </div>
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                      {slide.id === "aliado-fenix" ? "Centro de Desarrollo Deportivo FENIX" : "Club Medusas"}
+                    </h1>
+                    <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
+                      {slide.description}
+                    </p>
+                    <div className="pt-6">
+                      <Button asChild size="lg" className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90 text-white px-8 py-4 text-lg">
+                        <Link href={slide.href!}>
+                          Conocer más
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  <div className="flex justify-center lg:justify-end">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-md w-full">
+                      <div className="h-40 md:h-48 flex items-center justify-center mb-6">
+                        <Image
+                          src={slide.logo!}
+                          alt={`Logo ${slide.id === "aliado-fenix" ? "FENIX" : "Medusas"}`}
+                          width={slide.id === "aliado-fenix" ? 240 : 180}
+                          height={slide.id === "aliado-fenix" ? 120 : 240}
+                          className="object-contain max-h-full w-auto"
+                          onError={(e) => {
+                            e.currentTarget.src = "/placeholder.svg"
+                          }}
+                        />
+                      </div>
+                      <div className="text-center">
+                        <h3 className="text-white font-semibold text-xl mb-3">
+                          {slide.id === "aliado-fenix" ? "Centro FENIX" : "Club Medusas"}
+                        </h3>
+                        <p className="text-white/80 text-base leading-relaxed">
+                          {slide.id === "aliado-fenix" 
+                            ? "4 canchas de voleibol reglamentarias • 2 de baloncesto próximamente" 
+                            : "Actividades subacuáticas especializadas • Complejo Acuático Simón Bolívar"
+                          }
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="text-white space-y-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  {slide.title}
+                </h1>
+                <p className="text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed">
+                  {slide.description}
+                </p>
+                {slide.href && (
+                  <div className="pt-4">
+                    <Button asChild size="lg" className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90 text-white">
+                      <Link href={slide.href}>
+                        Conocer más
+                      </Link>
+                    </Button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       ))}
@@ -171,7 +261,7 @@ export default function BannerSlider() {
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => goToSlide(index)}
             className={cn(
               "w-3 h-3 rounded-full transition-colors",
               index === currentSlide ? "bg-white" : "bg-white/50"

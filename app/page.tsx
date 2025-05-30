@@ -294,132 +294,76 @@ export default function Home() {
       </section>
  {/* Artículos Deportivos */}
  <ArticlesSection />
-      {/* Escenarios Deportivos */}
-      <section className="py-16 md:py-24">
-        <div className="container px-4 md:px-6">
-          <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
-              Escenarios Deportivos
-            </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Instalaciones Deportivas Recomendadas
-            </h2>
-            <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              Descubre las mejores instalaciones deportivas para practicar tu deporte favorito.
-            </p>
-          </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <SlideIn direction="up" delay={0.1}>
-              <div className="relative group overflow-hidden rounded-lg">
-                <Image
-                  src="/futbol.jpg"
-                  alt="Campos de Fútbol"
-                  width={400}
-                  height={300}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
-                  <h3 className="text-xl font-bold">Campos de Fútbol</h3>
-                  <p className="text-white/80">Las mejores instalaciones para el deporte rey</p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
-                  >
-                    <Link href="/escenarios-deportivos?tipo=futbol">Ver instalaciones</Link>
-                  </Button>
-                </div>
-              </div>
-            </SlideIn>
-            <SlideIn direction="up" delay={0.2}>
-              <div className="relative group overflow-hidden rounded-lg">
-                <Image
-                  src="/padel.jpeg"
-                  alt="Pistas de Pádel"
-                  width={400}
-                  height={300}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
-                  <h3 className="text-xl font-bold">Pistas de Pádel</h3>
-                  <p className="text-white/80">Disfruta del deporte de moda en las mejores pistas</p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
-                  >
-                    <Link href="/escenarios-deportivos?tipo=padel">Ver instalaciones</Link>
-                  </Button>
-                </div>
-              </div>
-            </SlideIn>
-            <SlideIn direction="up" delay={0.3}>
-              <div className="relative group overflow-hidden rounded-lg">
-                <Image
-                  src="/tenis.jpeg"
-                  alt="Pistas de Tenis"
-                  width={400}
-                  height={300}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
-                  <h3 className="text-xl font-bold">Pistas de Tenis</h3>
-                  <p className="text-white/80">Clubes y academias de tenis de primer nivel</p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="mt-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30 hover:text-white"
-                  >
-                    <Link href="/escenarios-deportivos?tipo=tenis">Ver instalaciones</Link>
-                  </Button>
-                </div>
-              </div>
-            </SlideIn>
-          </div>
-
-          <div className="flex justify-center mt-8">
-            <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
-              <Link href="/escenarios-deportivos">Ver todos los escenarios</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Clientes */}
       <section className="py-16 md:py-24 bg-[#F8F9FA]">
         <div className="container px-4 md:px-6">
           <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="inline-block rounded-lg bg-[#0B8CBF]/10 px-3 py-1 text-sm text-[#0B8CBF]">
-              Nuestros Clientes
+              Nuestros Aliados
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Empresas que confían en nosotros
+              Aliados Deportivos
             </h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              Conoce algunas de las empresas e instituciones con las que hemos trabajado.
+              Conoce los centros deportivos y clubes especializados con los que colaboramos para ofrecer las mejores experiencias deportivas.
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <ScaleIn key={i} delay={i * 0.05} className="w-full max-w-[150px]">
-                <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 h-24 flex items-center justify-center">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            <ScaleIn delay={0.1}>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                <div className="mx-auto mb-6 h-24 flex items-center justify-center">
                   <Image
-                    src={`/placeholder.svg`}
-                    alt={`Cliente ${i}`}
-                    width={120}
-                    height={60}
-                    className="max-h-16 w-auto object-contain"
+                    src="/fenix-logo.jpg"
+                    alt="Centro FENIX"
+                    width={160}
+                    height={80}
+                    className="object-contain max-h-24 w-auto"
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.svg"
+                    }}
                   />
                 </div>
-              </ScaleIn>
-            ))}
+                <h3 className="font-semibold text-lg mb-2 text-[#0B8CBF]">Centro de Desarrollo Deportivo FENIX</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Especializado en canchas de voleibol y baloncesto reglamentarias
+                </p>
+                <Button asChild size="sm" className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90">
+                  <Link href="/aliados-deportivos/fenix">Ver más</Link>
+                </Button>
+              </div>
+            </ScaleIn>
+
+            <ScaleIn delay={0.2}>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center hover:shadow-lg transition-shadow">
+                <div className="mx-auto mb-6 h-24 flex items-center justify-center">
+                  <Image
+                    src="/medusas-logo.jpg"
+                    alt="Club Medusas"
+                    width={60}
+                    height={80}
+                    className="object-contain max-h-24 w-auto"
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.svg"
+                    }}
+                  />
+                </div>
+                <h3 className="font-semibold text-lg mb-2 text-[#0B8CBF]">Club Medusas</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Club especializado en actividades subacuáticas en el Complejo Acuático Simón Bolívar
+                </p>
+                <Button asChild size="sm" className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90">
+                  <Link href="/aliados-deportivos/medusas">Ver más</Link>
+                </Button>
+              </div>
+            </ScaleIn>
           </div>
 
           <div className="flex justify-center mt-8">
-            <Button asChild className="bg-[#0B8CBF] hover:bg-[#5357A6]">
-              <Link href="/clientes">Ver todos los clientes</Link>
+            <Button asChild className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90">
+              <Link href="/aliados-deportivos">Ver todos los aliados deportivos</Link>
             </Button>
           </div>
         </div>
