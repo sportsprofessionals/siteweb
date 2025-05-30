@@ -163,20 +163,20 @@ export default function BannerSlider() {
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white p-4">
             {slide.type === "aliado" ? (
-              <div className="container mx-auto px-6 md:px-8 lg:px-12">
-                <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-                  <div className="text-white space-y-6">
-                    <div className="inline-block bg-[#0B8CBF]/20 px-4 py-2 rounded-full text-sm font-medium text-white/90 mb-4">
+              <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center max-w-7xl mx-auto">
+                  <div className="text-white space-y-3 md:space-y-6 text-center lg:text-left">
+                    <div className="inline-block bg-[#0B8CBF]/20 px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium text-white/90 mb-2 md:mb-4">
                       {slide.title}
                     </div>
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                    <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                       {slide.id === "aliado-fenix" ? "Centro de Desarrollo Deportivo FENIX" : "Club Medusas"}
                     </h1>
-                    <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
+                    <p className="text-sm md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                       {slide.description}
                     </p>
-                    <div className="pt-6">
-                      <Button asChild size="lg" className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90 text-white px-8 py-4 text-lg">
+                    <div className="pt-2 md:pt-6">
+                      <Button asChild size="sm" className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90 text-white md:px-8 md:py-4 md:text-lg">
                         <Link href={slide.href!}>
                           Conocer más
                         </Link>
@@ -185,13 +185,13 @@ export default function BannerSlider() {
                   </div>
                   
                   <div className="flex justify-center lg:justify-end">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-md w-full">
-                      <div className="h-40 md:h-48 flex items-center justify-center mb-6">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg md:rounded-xl p-4 md:p-8 max-w-xs md:max-w-md w-full">
+                      <div className="h-24 md:h-40 lg:h-48 flex items-center justify-center mb-3 md:mb-6">
                         <Image
                           src={slide.logo!}
                           alt={`Logo ${slide.id === "aliado-fenix" ? "FENIX" : "Medusas"}`}
-                          width={slide.id === "aliado-fenix" ? 240 : 180}
-                          height={slide.id === "aliado-fenix" ? 120 : 240}
+                          width={slide.id === "aliado-fenix" ? 160 : 120}
+                          height={slide.id === "aliado-fenix" ? 80 : 160}
                           className="object-contain max-h-full w-auto"
                           onError={(e) => {
                             e.currentTarget.src = "/placeholder.svg"
@@ -199,10 +199,10 @@ export default function BannerSlider() {
                         />
                       </div>
                       <div className="text-center">
-                        <h3 className="text-white font-semibold text-xl mb-3">
+                        <h3 className="text-white font-semibold text-sm md:text-xl mb-1 md:mb-3">
                           {slide.id === "aliado-fenix" ? "Centro FENIX" : "Club Medusas"}
                         </h3>
-                        <p className="text-white/80 text-base leading-relaxed">
+                        <p className="text-white/80 text-xs md:text-base leading-relaxed">
                           {slide.id === "aliado-fenix" 
                             ? "4 canchas de voleibol reglamentarias • 2 de baloncesto próximamente" 
                             : "Actividades subacuáticas especializadas • Complejo Acuático Simón Bolívar"
