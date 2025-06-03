@@ -212,16 +212,16 @@ No obstante, el enfoque filosófico del deporte recreativo prioriza la inclusió
     sport: "Fisiología del Ejercicio",
     content: `En el mundo del deporte y la actividad física, se hace necesario comprender cómo responde el cuerpo al esfuerzo físico, esto hace que sea esencial diseñar programas seguros, eficaces y orientados a resultados. La fisiología del ejercicio se encarga precisamente de estudiar estos procesos, permitiendo a los profesionales del deporte: licenciados en Educación Física, entrenadores personales, preparadores físicos y otros especialistas— aplicar principios científicos en la planificación, ejecución y evaluación de programas de entrenamiento. El objetivo: que sus clientes y deportistas alcancen sus metas de forma eficiente y sostenible.
 
-**ASPECTO UNO:**
-**EL MÚSCULO ES EL PROTAGONISTA, PERO NO ACTÚA SOLO.**
+Primer Aspecto:
+EL MÚSCULO ES EL PROTAGONISTA, PERO NO ACTÚA SOLO.
 
 Cuando realizamos ejercicio físico, los músculos esqueléticos son los principales actores visibles: son ellos los que se contraen, se fortalecen o se hipertrofian en respuesta al entrenamiento. Sin embargo, detrás de cada movimiento hay una interacción compleja entre múltiples sistemas del cuerpo humano: cardiovascular, respiratorio, óseo, nervioso, endocrino, entre otros. Es lo que se conoce como la "biomáquina humana", un conjunto integrado que reacciona de forma sistémica al estímulo del ejercicio.
 
 Diseñar un programa efectivo de entrenamiento no solo implica "trabajar los músculos", sino entender cómo interactúan con el sistema musculoesquelético, el sistema nervioso central y periférico, y el sistema energético, entre otros.
 
-**ASPECTO DOS:**
-**¿CÓMO TRABAJAN LOS MÚSCULOS?**
-**Con la unidad motora y la contracción muscular**
+Segundo Aspecto:
+¿CÓMO TRABAJAN LOS MÚSCULOS?
+Con la unidad motora y la contracción muscular
 
 Los músculos esqueléticos están formados por fibras musculares agrupadas en haces llamados fascículos. Cada fibra muscular contiene miofibrillas compuestas principalmente por proteínas contráctiles: actina, miosina y titina. La interacción entre ellas permite la generación de fuerza.
 
@@ -229,55 +229,55 @@ La contracción muscular inicia con un impulso nervioso originado en el cerebro.
 
 Este conjunto de neurona y fibras musculares que inerva se denomina unidad motora. En movimientos sencillos (como tomar una cuchara), se activan pocas unidades motoras; en acciones de máxima fuerza, como el levamiento de peso con altos kilogramos, se activan muchas al mismo tiempo.
 
-**ASPECTO TRES:**
-**TIPOS DE FIBRAS MUSCULARES Y SU RELACIÓN CON EL RENDIMIENTO**
+Tercer Aspecto:
+TIPOS DE FIBRAS MUSCULARES Y SU RELACIÓN CON EL RENDIMIENTO
 
 Existen varios tipos de fibras musculares, pero las principales son:
 
-• **Fibras Tipo I (de contracción lenta)**: óptimas para deportes de resistencia como ciclismo, maratón o natación de larga distancia.
+• Fibras Tipo I (de contracción lenta): óptimas para deportes de resistencia como ciclismo, maratón o natación de larga distancia.
 
-• **Fibras Tipo II (de contracción rápida)**: ideales para deportes explosivos y de corta duración como halterofilia, sprints o saltos.
+• Fibras Tipo II (de contracción rápida): ideales para deportes explosivos y de corta duración como halterofilia, sprints o saltos.
 
 Cada persona tiene una combinación genética única de estos tipos de fibras. Sin embargo, el entrenamiento puede mejorar la eficiencia funcional de ambas, optimizando el rendimiento, independientemente del perfil deportivo.
 
-**ASPECTO CUATRO:**
-**ADAPTACIONES FISIOLÓGICAS AL ENTRENAMIENTO**
+Cuarto Aspecto:
+ADAPTACIONES FISIOLÓGICAS AL ENTRENAMIENTO
 
 Con el entrenamiento sistemático, el cuerpo se adapta para responder mejor al esfuerzo. Estas adaptaciones pueden observarse en múltiples niveles:
 
-**A nivel muscular:**
+A nivel muscular:
 • Mayor producción de proteínas contráctiles (actina y miosina).
 • Incremento de la masa muscular (hipertrofia).
 • Aumento del número de unidades motoras reclutadas.
 • Aumento de mitocondrias y enzimas metabólicas (en entrenamiento de resistencia).
 
-**A nivel cardiovascular:**
+A nivel cardiovascular:
 • Disminución del ritmo cardíaco en reposo.
 • Mejor recuperación del pulso tras el ejercicio.
 • Aumento del volumen sistólico y de la hipertrofia ventricular izquierda.
 
-**A nivel óseo y articular:**
+A nivel óseo y articular:
 • Mayor densidad mineral ósea.
 • Refuerzo de ligamentos y tendones.
 
-**A nivel pulmonar y respiratorio:**
+A nivel pulmonar y respiratorio:
 • Mayor volumen corriente y ventilación máxima.
 • Aumento en la eficiencia del intercambio gaseoso (O₂ y CO₂).
 
-**A nivel circulatorio:**
+A nivel circulatorio:
 • Reducción de la presión arterial (en reposo y durante el esfuerzo).
 • Mayor flujo sanguíneo a músculos y piel.
 • Mejora de la capacidad aeróbica y anaeróbica.
 
 Estas adaptaciones no solo mejoran el rendimiento, sino que tienen un efecto preventivo y terapéutico en la salud, haciendo del ejercicio un recurso valioso en la medicina preventiva y el bienestar general de las personas que practican actividad física, deporte recreativo, deporte de rendimiento o de alto rendimiento.
 
-**ASPECTO CINCO:**
-**GENÉTICA, SEXO Y RESPUESTA INDIVIDUAL AL ENTRENAMIENTO**
+Quinto Aspecto:
+GENÉTICA, SEXO Y RESPUESTA INDIVIDUAL AL ENTRENAMIENTO
 
 Aunque el entrenamiento tiene un efecto positivo en todas las personas, la magnitud de la mejora varía según la genética individual. Algunas personas responden rápidamente con aumentos significativos en fuerza, velocidad o resistencia, mientras que otras requieren mayor tiempo o estímulo. Además, el sexo también influye en el patrón de adaptación, especialmente en aspectos hormonales, metabólicos y estructurales.
 
-**Conclusión:**
-**Aplicar la fisiología del ejercicio en la práctica profesional**
+Conclusión:
+Aplicar la fisiología del ejercicio en la práctica profesional
 
 Comprender y usar los principios de la fisiología del ejercicio permite que los profesionales del deporte implementen programas personalizados, seguros y basados en evidencia. Al considerar las particularidades individuales de cada cliente o atleta —edad, condición física, objetivos, genética, historial de entrenamiento— se optimiza el proceso de adaptación y se mejora el rendimiento deportivo y la salud en niños, jóvenes, atletas, adultos y personas en condición de discapacidad.
 
