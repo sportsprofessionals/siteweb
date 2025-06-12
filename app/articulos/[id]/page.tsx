@@ -14,7 +14,6 @@ export default function ArticlePage() {
   if (!article) {
     notFound();
   }
-
   const formatText = (text: string) => {
     return text.split(' ').map(word => {
       if (word === word.toUpperCase() && word.length > 1) {
@@ -22,13 +21,13 @@ export default function ArticlePage() {
       }
       return word
     }).join(' ')
-  }
+  };
 
   const renderContent = () => {
     let inList = false;
     let inGlossary = false;
-    const result = [];
-    let listItems = [];
+    const result: React.ReactElement[] = [];
+    let listItems: React.ReactElement[] = [];
 
     article.content.split("\n").forEach((paragraph, index) => {
       // Check if this is a GLOSARIO section
@@ -171,11 +170,14 @@ export default function ArticlePage() {
           );
           return;
         }
-      }
-
-      // Handle formatted text with bold markers
-      if (paragraph.includes("**")) {
-        const formattedText = formatText(paragraph).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      }      // Handle formatted text with bold markers and/or links
+      if (paragraph.includes("**") || paragraph.includes("[")) {
+        let formattedText = formatText(paragraph)
+          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+          .replace(/\[([^\]]+)\]\(mailto:([^)]+)\)/g, '<a href="#" onclick="window.location.href=\'mailto:$2\'; return false;" class="text-[#0B8CBF] hover:text-[#0B8CBF]/80 underline cursor-pointer">$1</a>')
+          .replace(/\[([^\]]+)\]\(https:\/\/wa\.me\/([^)]+)\)/g, '<a href="https://wa.me/$2" target="_blank" rel="noopener noreferrer" class="text-[#0B8CBF] hover:text-[#0B8CBF]/80 underline">$1</a>')
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#0B8CBF] hover:text-[#0B8CBF]/80 underline">$1</a>');
+        
         result.push(
           <p 
             key={`paragraph-${index}`} 
