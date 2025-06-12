@@ -5,10 +5,12 @@ import { articles } from "@/lib/articles";
 import { useAnimation } from "@/components/animation-provider";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import AudioPlayer from "@/components/AudioPlayer";
 
 export default function ArticlePage() {
   const { FadeIn, SlideIn } = useAnimation();
-  const { id } = useParams();
+  const params = useParams();
+  const id = params?.id as string;
   const article = articles.find((a) => a.id === id);
 
   if (!article) {
@@ -89,12 +91,31 @@ export default function ArticlePage() {
                 fill
                 className="object-cover"
               />
-            </div>
-            <p className="text-sm text-center text-muted-foreground mt-2">
+            </div>            <p className="text-sm text-center text-muted-foreground mt-2">
               {imageType || "Imagen ilustrativa"}
             </p>
           </div>
         );
+        return;
+      }
+
+      // Handle audio players
+      if (paragraph.includes("<audio-player")) {
+        const srcMatch = paragraph.match(/src="([^"]+)"/);
+        const titleMatch = paragraph.match(/title="([^"]+)"/);
+        
+        if (srcMatch && titleMatch) {
+          const src = srcMatch[1];
+          const title = titleMatch[1];
+          
+          result.push(
+            <AudioPlayer 
+              key={`audio-${index}`}
+              src={src}
+              title={title}
+            />
+          );
+        }
         return;
       }
 

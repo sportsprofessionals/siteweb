@@ -289,10 +289,12 @@ Comprender y usar los principios de la fisiología del ejercicio permite que los
   },
   {
     id: "natacion-adaptada-escolar",
-    title: "La Natación Adaptada en el Ámbito Escolar: Un Catalizador para el Desarrollo Integral de Estudiantes con Discapacidad",
+    title:
+      "La Natación Adaptada en el Ámbito Escolar: Un Catalizador para el Desarrollo Integral de Estudiantes con Discapacidad",
     summary:
       "Descubre cómo la natación adaptada en el contexto escolar se convierte en un poderoso catalizador de bienestar, autonomía y rendimiento deportivo para estudiantes con discapacidad.",
-    author: "Joseph P. Winnick, David L. Porretta - Adaptado por SPORTSPROFESSIONALS",
+    author:
+      "Joseph P. Winnick, David L. Porretta - Adaptado por SPORTSPROFESSIONALS",
     imageUrl: "/natacion-adaptada.jpg",
     sport: "Natación Adaptada",
     content: `Palabras Clave: Natación adaptada, discapacidad, educación escolar, beneficios físicos, bienestar psicológico, inclusión social, deporte adaptado, pedagogía individualizada.
@@ -300,6 +302,9 @@ Comprender y usar los principios de la fisiología del ejercicio permite que los
 INTRODUCCIÓN
 
 La incorporación de la natación en el currículo escolar representa una oportunidad invaluable para el desarrollo integral de los estudiantes con discapacidad. El medio acuático, junto con una orientación adecuada hacia el deporte adaptado, trasciende la mera actividad física para convertirse en un poderoso catalizador de bienestar, autonomía y rendimiento deportivo. Para lograr este impacto positivo, se requiere un esfuerzo coordinado y fundamentado por parte de profesores de educación física, entrenadores especializados, monitores acuáticos y las familias. Este artículo se propone analizar en profundidad los beneficios multidimensionales de la natación adaptada y las estrategias clave para su implementación efectiva en el ámbito escolar.
+
+**🎧 Audio Complementario:**
+<audio-player src="/natacion_adp.wav" title="Natación Adaptada en el Ámbito Escolar"></audio-player>
 
 Beneficios Multidimensionales en el Medio Acuático
 
