@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, ArrowRight, Play, Sparkles, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
@@ -10,89 +10,145 @@ import Link from "next/link"
 interface Slide {
   id: string
   title: string
+  subtitle: string
   description: string
   image: string
   href?: string
-  logo?: string
-  type?: string
+  accent: string
+  icon: any
 }
 
 const slides: Slide[] = [
   {
-    id: "aliado-fenix",
-    title: "Nuevo Aliado Deportivo",
-    description: "Centro de Desarrollo Deportivo FENIX - Especializado en canchas de voleibol y baloncesto reglamentarias. Ubicado en Barrio Salazar Gómez.",
-    image: "/voley2.jpg",
-    href: "/aliados-deportivos/fenix",
-    logo: "/fenix-logo.jpg",
-    type: "aliado"
-  },
-  {
-    id: "aliado-medusas",
-    title: "Nuevo Aliado Deportivo", 
-    description: "Club Medusas - Club especializado en actividades subacuáticas que desarrolla sus actividades en el Complejo Acuático Simón Bolívar.",
-    image: "/medusas2.jpeg",
-    href: "/aliados-deportivos/medusas",
-    logo: "/medusas-logo.jpg",
-    type: "aliado"
-  },
-  {
     id: "admin-deportiva",
-    title: "Administración Deportiva",
-    description: "Planeación estratégica, liderazgo, marketing social del deporte y asesorías a empresas deportivas.",
+    title: "Administración",
+    subtitle: "Deportiva",
+    description: "Planeación estratégica, liderazgo y marketing social del deporte con enfoque profesional e innovador.",
     image: "/admin-deportiva-2.jpg",
     href: "/servicios/administracion-deportiva",
+    accent: "from-blue-400 to-cyan-500",
+    icon: ChevronRight,
   },
   {
     id: "educacion-fisica",
-    title: "Educación Física",
-    description: "Administración y gestión de la educación física escolar y comunitaria, formación de habilidades motoras.",
+    title: "Educación",
+    subtitle: "Física",
+    description: "Administración y gestión educativa escolar y comunitaria, formación integral de habilidades motoras.",
     image: "/educacion-fisica-2.jpg",
     href: "/servicios/educacion-fisica",
+    accent: "from-purple-400 to-pink-500",
+    icon: Sparkles,
   },
   {
     id: "actividad-fisica",
-    title: "Actividad Física",
-    description: "Pausas activas empresariales, actividad física para adultos y acondicionamiento físico.",
+    title: "Actividad",
+    subtitle: "Física",
+    description: "Pausas activas empresariales, programas de bienestar y acondicionamiento físico personalizado.",
     image: "/actividad-fisica-2.jpg",
     href: "/servicios/actividad-fisica",
+    accent: "from-orange-400 to-red-500",
+    icon: Zap,
   },
   {
     id: "deporte",
     title: "Deporte",
-    description: "Capacitación en entrenamiento deportivo, monitores deportivos, entrenadores y turismo deportivo.",
+    subtitle: "Competitivo",
+    description: "Capacitación en entrenamiento deportivo, formación de monitores y turismo deportivo especializado.",
     image: "/deporte-2.jpg",
     href: "/servicios/deporte",
+    accent: "from-green-400 to-emerald-500",
+    icon: Play,
   },
   {
     id: "recreacion",
     title: "Recreación",
-    description: "Experiencias activas y bienestar integral para empresas e instituciones",
+    subtitle: "Integral",
+    description: "Experiencias activas y bienestar integral para empresas, instituciones y comunidades.",
     image: "/recreacion-2.jpg",
     href: "/servicios/recreacion",
+    accent: "from-indigo-400 to-blue-500",
+    icon: ArrowRight,
   }
 ]
+
+// Componente de partículas flotantes
+const FloatingParticles = ({ count = 50 }: { count?: number }) => {
+  const particles = Array.from({ length: count }, (_, i) => {
+    const delay = Math.random() * 20
+    const duration = 15 + Math.random() * 25
+    const size = 2 + Math.random() * 4
+    const left = Math.random() * 100
+    const opacity = 0.1 + Math.random() * 0.4
+    
+    return (
+      <div
+        key={i}
+        className="absolute rounded-full bg-white pointer-events-none"
+        style={{
+          left: `${left}%`,
+          width: `${size}px`,
+          height: `${size}px`,
+          opacity,
+          animation: `float ${duration}s linear infinite`,
+          animationDelay: `${delay}s`,
+        }}
+      />
+    )
+  })
+  
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      {particles}
+      <style jsx>{`
+        @keyframes float {
+          0% {
+            transform: translateY(100vh) rotate(0deg);
+          }
+          100% {
+            transform: translateY(-100px) rotate(360deg);
+          }
+        }
+      `}</style>
+    </div>
+  )
+}
+
+// Componente de geometrías decorativas
+const GeometricShapes = () => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    {/* Círculos grandes con gradientes */}
+    <div className="absolute -top-32 -left-32 w-64 h-64 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse" />
+    <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-tl from-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse delay-75" />
+    <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-gradient-to-r from-cyan-500/15 to-transparent rounded-full blur-2xl animate-pulse delay-150" />
+    
+    {/* Formas geométricas flotantes */}
+    <div className="absolute top-20 left-1/4 w-4 h-4 bg-white/20 transform rotate-45 animate-bounce" />
+    <div className="absolute bottom-32 right-1/4 w-6 h-2 bg-cyan-400/30 animate-pulse" />
+    <div className="absolute top-1/3 right-20 w-2 h-8 bg-purple-400/25 animate-bounce delay-100" />
+    <div className="absolute bottom-1/4 left-20 w-8 h-8 bg-blue-400/20 rounded-full animate-ping" />
+    
+    {/* Líneas decorativas */}
+    <div className="absolute top-1/2 left-0 w-32 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse" />
+    <div className="absolute top-1/3 right-0 w-24 h-px bg-gradient-to-l from-transparent via-cyan-400/40 to-transparent animate-pulse delay-200" />
+  </div>
+)
 
 export default function BannerSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const touchStartX = useRef(0)
   const touchEndX = useRef(0)
   const sliderRef = useRef<HTMLDivElement>(null)
 
-  // Check if device is mobile when component mounts and on window resize
+  // Check if device is mobile
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768)
     }
     
-    // Set initial value
     checkIfMobile()
-    
-    // Add event listener for window resize
     window.addEventListener('resize', checkIfMobile)
-    
-    // Cleanup event listener on component unmount
     return () => window.removeEventListener('resize', checkIfMobile)
   }, [])
 
@@ -119,156 +175,263 @@ export default function BannerSlider() {
     
     if (Math.abs(swipeDistance) > minSwipeDistance) {
       if (swipeDistance > 0) {
-        prevSlide() // Swipe right, go to previous slide
+        prevSlide()
       } else {
-        nextSlide() // Swipe left, go to next slide
+        nextSlide()
       }
     }
   }
 
+  // Auto-play functionality
   useEffect(() => {
+    if (!isAutoPlaying) return
+    
     const interval = setInterval(() => {
       nextSlide()
-    }, 5000)
+    }, 7000)
     return () => clearInterval(interval)
-  }, [])
+  }, [isAutoPlaying])
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index)
   }
 
+  const currentSlideData = slides[currentSlide]
+  const Icon = currentSlideData.icon
+
   return (
     <div 
-      className="relative h-[500px] md:h-[600px] overflow-hidden" 
+      className="relative h-[70vh] md:h-[85vh] overflow-hidden" 
       ref={sliderRef}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onMouseEnter={() => setIsAutoPlaying(false)}
+      onMouseLeave={() => setIsAutoPlaying(true)}
     >
+      {/* Partículas flotantes */}
+      <FloatingParticles count={40} />
+      
+      {/* Geometrías decorativas */}
+      <GeometricShapes />
+
       {slides.map((slide, index) => (
         <div
           key={slide.id}
           className={cn(
-            "absolute inset-0 transition-opacity duration-1000",
-            index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none",
+            "absolute inset-0 transition-all duration-1500 ease-in-out",
+            index === currentSlide 
+              ? "opacity-100 scale-100" 
+              : "opacity-0 scale-110 pointer-events-none",
           )}
         >
-          <div className="absolute inset-0 bg-black/50 z-10" />
-          <Image
-            src={slide.image}
-            alt={slide.title}
-            fill
-            className="object-cover"
-            priority={index === 0}
-          />
+          {/* Imagen de fondo con parallax */}
+          <div className="absolute inset-0 overflow-hidden">
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              className={cn(
+                "object-cover transition-transform duration-[3000ms] ease-out",
+                index === currentSlide ? "scale-105" : "scale-100"
+              )}
+              priority={index === 0}
+            />
+            {/* Overlay gradiente dinámico */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/40" />
+            <div className={cn(
+              "absolute inset-0 bg-gradient-to-r opacity-30",
+              slide.accent.replace('from-', 'from-').replace('to-', 'to-') + '/20'
+            )} />
+          </div>
+
+          {/* Contenido principal */}
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white p-4">
-            {slide.type === "aliado" ? (
-              <div className="container mx-auto px-4 md:px-6 lg:px-8">
-                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center max-w-7xl mx-auto">
-                  <div className="text-white space-y-3 md:space-y-6 text-center lg:text-left">
-                    <div className="inline-block bg-[#0B8CBF]/20 px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium text-white/90 mb-2 md:mb-4">
-                      {slide.title}
-                    </div>
-                    <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                      {slide.id === "aliado-fenix" ? "Centro de Desarrollo Deportivo FENIX" : "Club Medusas"}
-                    </h1>
-                    <p className="text-sm md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                      {slide.description}
-                    </p>
-                    <div className="pt-2 md:pt-6">
-                      <Button asChild size="sm" className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90 text-white md:px-8 md:py-4 md:text-lg">
-                        <Link href={slide.href!}>
-                          Conocer más
-                        </Link>
-                      </Button>
-                    </div>
-                  </div>
+            <div className="max-w-6xl mx-auto space-y-8">
+              
+              {/* Badge dinámico */}
+              <div className={cn(
+                "inline-flex items-center gap-3 rounded-full bg-white/10 backdrop-blur-xl px-6 py-3 border border-white/20 shadow-2xl opacity-0 animate-in slide-in-from-top-4 duration-1000",
+                index === currentSlide && "opacity-100"
+              )}
+              style={{
+                animationDelay: index === currentSlide ? "0.2s" : "0s"
+              }}>
+                <div className={cn(
+                  "w-8 h-8 rounded-full bg-gradient-to-br flex items-center justify-center shadow-lg",
+                  slide.accent
+                )}>
+                  <Icon className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-lg font-bold">
+                  Servicios Especializados
+                </span>
+              </div>
+
+              {/* Título principal animado */}
+              <div className="space-y-4">
+                <h1 className={cn(
+                  "text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight opacity-0 animate-in slide-in-from-bottom-8 duration-1000",
+                  index === currentSlide && "opacity-100"
+                )}
+                style={{
+                  animationDelay: index === currentSlide ? "0.4s" : "0s"
+                }}>
+                  <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent drop-shadow-2xl">
+                    {slide.title}
+                  </span>
+                  <span className={cn(
+                    "block bg-gradient-to-r bg-clip-text text-transparent drop-shadow-xl",
+                    slide.accent
+                  )}>
+                    {slide.subtitle}
+                  </span>
+                </h1>
+              </div>
+
+              {/* Descripción con efectos */}
+              <p className={cn(
+                "text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed font-light opacity-0 animate-in slide-in-from-bottom-4 duration-1000",
+                index === currentSlide && "opacity-100"
+              )}
+              style={{
+                animationDelay: index === currentSlide ? "0.6s" : "0s"
+              }}>
+                {slide.description}
+              </p>
+
+              {/* Botones de acción */}
+              {slide.href && (
+                <div className={cn(
+                  "flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 opacity-0 animate-in slide-in-from-bottom-4 duration-1000",
+                  index === currentSlide && "opacity-100"
+                )}
+                style={{
+                  animationDelay: index === currentSlide ? "0.8s" : "0s"
+                }}>
+                  <Button 
+                    asChild 
+                    size="lg" 
+                    className={cn(
+                      "bg-gradient-to-r hover:shadow-2xl text-white shadow-xl rounded-2xl px-8 py-4 text-lg font-bold transition-all duration-500 border-0 group transform hover:scale-105",
+                      slide.accent,
+                      "hover:from-white hover:to-gray-100 hover:text-gray-900"
+                    )}
+                  >
+                    <Link href={slide.href} className="flex items-center gap-3">
+                      <span>Explorar Servicio</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                    </Link>
+                  </Button>
                   
-                  <div className="flex justify-center lg:justify-end">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg md:rounded-xl p-4 md:p-8 max-w-xs md:max-w-md w-full">
-                      <div className="h-24 md:h-40 lg:h-48 flex items-center justify-center mb-3 md:mb-6">
-                        <Image
-                          src={slide.logo!}
-                          alt={`Logo ${slide.id === "aliado-fenix" ? "FENIX" : "Medusas"}`}
-                          width={slide.id === "aliado-fenix" ? 160 : 120}
-                          height={slide.id === "aliado-fenix" ? 80 : 160}
-                          className="object-contain max-h-full w-auto"
-                          onError={(e) => {
-                            e.currentTarget.src = "/placeholder.svg"
-                          }}
-                        />
-                      </div>
-                      <div className="text-center">
-                        <h3 className="text-white font-semibold text-sm md:text-xl mb-1 md:mb-3">
-                          {slide.id === "aliado-fenix" ? "Centro FENIX" : "Club Medusas"}
-                        </h3>
-                        <p className="text-white/80 text-xs md:text-base leading-relaxed">
-                          {slide.id === "aliado-fenix" 
-                            ? "4 canchas de voleibol reglamentarias • 2 de baloncesto próximamente" 
-                            : "Actividades subacuáticas especializadas • Complejo Acuático Simón Bolívar"
-                          }
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <Button 
+                    asChild 
+                    variant="outline" 
+                    size="lg"
+                    className="border-2 border-white/40 text-white bg-white/10 backdrop-blur-lg hover:bg-white/20 hover:border-white/60 rounded-2xl px-8 py-4 text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    <Link href="/contacto" className="flex items-center gap-2">
+                      <span>Contactar</span>
+                    </Link>
+                  </Button>
+                </div>
+              )}
+
+              {/* Estadísticas rápidas */}
+              <div className={cn(
+                "flex items-center justify-center gap-8 mt-12 opacity-0 animate-in fade-in duration-1000",
+                index === currentSlide && "opacity-100"
+              )}
+              style={{
+                animationDelay: index === currentSlide ? "1s" : "0s"
+              }}>
+                <div className="text-center group">
+                  <div className="text-2xl md:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">5+</div>
+                  <div className="text-sm text-gray-300 uppercase tracking-wider">Servicios</div>
+                </div>
+                <div className="h-8 w-px bg-white/30" />
+                <div className="text-center group">
+                  <div className="text-2xl md:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">100+</div>
+                  <div className="text-sm text-gray-300 uppercase tracking-wider">Clientes</div>
+                </div>
+                <div className="h-8 w-px bg-white/30" />
+                <div className="text-center group">
+                  <div className="text-2xl md:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">24/7</div>
+                  <div className="text-sm text-gray-300 uppercase tracking-wider">Soporte</div>
                 </div>
               </div>
-            ) : (
-              <div className="text-white space-y-6">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  {slide.title}
-                </h1>
-                <p className="text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed">
-                  {slide.description}
-                </p>
-                {slide.href && (
-                  <div className="pt-4">
-                    <Button asChild size="lg" className="bg-[#0B8CBF] hover:bg-[#0B8CBF]/90 text-white">
-                      <Link href={slide.href}>
-                        Conocer más
-                      </Link>
-                    </Button>
-                  </div>
-                )}
-              </div>
-            )}
+            </div>
           </div>
         </div>
       ))}
       
-      {/* Navigation buttons - only shown on non-mobile devices */}
+      {/* Controles de navegación rediseñados */}
       {!isMobile && (
         <>
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full hidden md:block"
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-30 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-4 rounded-2xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 group transform hover:scale-110"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="h-6 w-6 group-hover:-translate-x-1 transition-transform duration-300" />
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full hidden md:block"
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-30 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-4 rounded-2xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 group transform hover:scale-110"
             aria-label="Next slide"
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
         </>
       )}
       
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
-        {slides.map((_, index) => (
+      {/* Indicadores rediseñados */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+        {slides.map((slide, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={cn(
-              "w-3 h-3 rounded-full transition-colors",
-              index === currentSlide ? "bg-white" : "bg-white/50"
+              "relative overflow-hidden rounded-full transition-all duration-500 group",
+              index === currentSlide 
+                ? "w-12 h-4 bg-white" 
+                : "w-4 h-4 bg-white/40 hover:bg-white/60"
             )}
             aria-label={`Go to slide ${index + 1}`}
-          />
+          >
+            {index === currentSlide && (
+              <div className={cn(
+                "absolute inset-0 bg-gradient-to-r rounded-full animate-pulse",
+                slide.accent
+              )} />
+            )}
+          </button>
         ))}
+        
+        {/* Indicador de auto-play */}
+        <div className="ml-4 flex items-center gap-2 bg-black/20 backdrop-blur-md rounded-full px-3 py-1 border border-white/20">
+          <div className={cn(
+            "w-2 h-2 rounded-full transition-colors duration-300",
+            isAutoPlaying ? "bg-green-400 animate-pulse" : "bg-gray-400"
+          )} />
+          <span className="text-xs text-white/80 font-medium">
+            {isAutoPlaying ? "AUTO" : "MANUAL"}
+          </span>
+        </div>
+      </div>
+
+      {/* Línea de progreso del slide */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-30">
+        <div 
+          className={cn(
+            "h-full bg-gradient-to-r transition-all duration-300",
+            currentSlideData.accent
+          )}
+          style={{
+            width: `${((currentSlide + 1) / slides.length) * 100}%`
+          }}
+        />
       </div>
     </div>
   )
