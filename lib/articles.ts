@@ -392,7 +392,7 @@ Si desea ampliar este contenido, escríbanos al correo [infosportsprofessionals@
     content: `**Palabras clave:** Liderazgo de Nivel Cinco, Jim Collins, organizaciones deportivas, humildad profesional, voluntad férrea, excelencia sostenible, gestión deportiva.
 
 **🎧 Audio Complementario:**
-<audio-player src="/articulo1.wav" title="Liderazgo de Nivel Cinco en las Organizaciones Deportivas"></audio-player>
+<audio-player src="/artiuclo1.wav" title="Liderazgo de Nivel Cinco en las Organizaciones Deportivas"></audio-player>
 
 [VIDEO: https://youtu.be/-qqPeloSTqs]
 

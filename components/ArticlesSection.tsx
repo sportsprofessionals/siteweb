@@ -64,23 +64,23 @@ export function ArticlesSection() {
           </p>
           
           {/* Estadísticas rediseñadas */}
-          <div className="flex items-center justify-center gap-12 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 mb-16">
             <div className="text-center group">
               <div className="text-4xl font-black bg-gradient-to-br from-cyan-500 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">{articles.length}+</div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wider">Artículos Especializados</div>
+              <div className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wider">Artículos Especializados</div>
             </div>
-            <div className="h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
+            <div className="hidden sm:block h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
             <div className="text-center group">
               <div className="text-4xl font-black bg-gradient-to-br from-purple-500 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">5</div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wider">Categorías Diversas</div>
+              <div className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wider">Categorías Diversas</div>
             </div>
-            <div className="h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
+            <div className="hidden sm:block h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
             <div className="text-center group">
               <div className="flex items-center justify-center gap-1 text-4xl font-black bg-gradient-to-br from-blue-500 to-cyan-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
                 <TrendingUp className="w-8 h-8" />
                 100%
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wider">Contenido Actualizado</div>
+              <div className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wider">Contenido Actualizado</div>
             </div>
           </div>
         </FadeIn>

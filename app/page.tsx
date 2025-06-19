@@ -80,20 +80,20 @@ export default function Home() {
             </p>
             
             {/* Estadísticas de confianza */}
-            <div className="flex items-center justify-center gap-12 mb-16">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 mb-16">
               <div className="text-center">
                 <div className="text-4xl font-black text-blue-400">5</div>
-                <div className="text-sm font-medium text-gray-400 uppercase tracking-wider">Servicios Especializados</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-400 uppercase tracking-wider">Servicios Especializados</div>
               </div>
-              <div className="h-12 w-px bg-gradient-to-b from-transparent via-gray-500 to-transparent" />
+              <div className="hidden sm:block h-12 w-px bg-gradient-to-b from-transparent via-gray-500 to-transparent" />
               <div className="text-center">
                 <div className="text-4xl font-black text-indigo-400">360°</div>
-                <div className="text-sm font-medium text-gray-400 uppercase tracking-wider">Soluciones Integrales</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-400 uppercase tracking-wider">Soluciones Integrales</div>
               </div>
-              <div className="h-12 w-px bg-gradient-to-b from-transparent via-gray-500 to-transparent" />
+              <div className="hidden sm:block h-12 w-px bg-gradient-to-b from-transparent via-gray-500 to-transparent" />
               <div className="text-center">
                 <div className="text-4xl font-black text-purple-400">100%</div>
-                <div className="text-sm font-medium text-gray-400 uppercase tracking-wider">Enfoque Profesional</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-400 uppercase tracking-wider">Enfoque Profesional</div>
               </div>
             </div>
           </FadeIn>
@@ -391,21 +391,21 @@ export default function Home() {
             </p>
             
             {/* Estadísticas de aliados */}
-            <div className="flex items-center justify-center gap-12 mt-12">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 mt-12">
               <div className="text-center group">
                 <div className="text-4xl font-black bg-gradient-to-br from-cyan-500 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">2+</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wider">Aliados Activos</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wider">Aliados Activos</div>
               </div>
-              <div className="h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
+              <div className="hidden sm:block h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
               <div className="text-center group">
                 <div className="text-4xl font-black bg-gradient-to-br from-purple-500 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">5+</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wider">Años Colaborando</div>
-          </div>
-              <div className="h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
+                <div className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wider">Años Colaborando</div>
+              </div>
+              <div className="hidden sm:block h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
               <div className="text-center group">
                 <div className="text-4xl font-black bg-gradient-to-br from-blue-500 to-cyan-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">100%</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wider">Confianza</div>
-        </div>
+                <div className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wider">Confianza</div>
+              </div>
             </div>
           </FadeIn>
 
@@ -739,20 +739,20 @@ export default function Home() {
                 </div>
 
                 {/* Estadísticas de formación */}
-                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/50 min-w-max">
-                  <div className="flex items-center gap-8">
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-xl rounded-2xl p-4 sm:p-6 shadow-2xl border border-white/50 min-w-max max-w-xs sm:max-w-none">
+                  <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
                     <div className="text-center">
-                      <div className="text-2xl font-black bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">500+</div>
+                      <div className="text-xl sm:text-2xl font-black bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">500+</div>
                       <div className="text-xs font-medium text-gray-600 uppercase tracking-wider">Profesionales Formados</div>
                     </div>
-                    <div className="h-8 w-px bg-gray-300" />
+                    <div className="hidden sm:block h-8 w-px bg-gray-300" />
                     <div className="text-center">
-                      <div className="text-2xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">10+</div>
+                      <div className="text-xl sm:text-2xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">10+</div>
                       <div className="text-xs font-medium text-gray-600 uppercase tracking-wider">Programas Activos</div>
                     </div>
-                    <div className="h-8 w-px bg-gray-300" />
+                    <div className="hidden sm:block h-8 w-px bg-gray-300" />
                     <div className="text-center">
-                      <div className="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">100%</div>
+                      <div className="text-xl sm:text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">100%</div>
                       <div className="text-xs font-medium text-gray-600 uppercase tracking-wider">Satisfacción</div>
                     </div>
                   </div>
@@ -810,20 +810,20 @@ export default function Home() {
             </p>
             
             {/* Estadísticas de confianza */}
-            <div className="flex items-center justify-center gap-12 mb-16">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 mb-16">
               <div className="text-center group">
                 <div className="text-4xl font-black bg-gradient-to-br from-cyan-500 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">24h</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wider">Respuesta Rápida</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wider">Respuesta Rápida</div>
               </div>
-              <div className="h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
+              <div className="hidden sm:block h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
               <div className="text-center group">
                 <div className="text-4xl font-black bg-gradient-to-br from-purple-500 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">100%</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wider">Personalizado</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wider">Personalizado</div>
               </div>
-              <div className="h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
+              <div className="hidden sm:block h-12 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
               <div className="text-center group">
                 <div className="text-4xl font-black bg-gradient-to-br from-blue-500 to-cyan-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">0€</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wider">Consulta Gratuita</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wider">Consulta Gratuita</div>
               </div>
             </div>
           </FadeIn>

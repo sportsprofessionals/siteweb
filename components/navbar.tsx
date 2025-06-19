@@ -221,7 +221,7 @@ export default function Navbar() {
           <Button 
             variant="outline" 
             size="icon" 
-            className="lg:hidden rounded-2xl border-2 border-gray-200/50 bg-white/80 backdrop-blur-sm hover:bg-blue-50 hover:border-blue-200 transition-all duration-300 shadow-lg hover:shadow-xl" 
+            className="lg:hidden rounded-lg border border-gray-200 bg-white hover:bg-blue-50 hover:border-blue-200 transition-colors duration-200 shadow-sm" 
             onClick={() => setIsOpen(true)}
           >
             <Menu className="h-5 w-5 text-gray-600" />
@@ -235,17 +235,17 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 lg:hidden">
           {/* Overlay con blur */}
           <div 
-            className="absolute inset-0 bg-black/20 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
           />
           
           {/* Panel principal */}
-          <div className="absolute right-0 top-0 h-full w-full max-w-sm bg-white/95 backdrop-blur-2xl shadow-2xl">
+          <div className="absolute right-0 top-0 h-screen w-full max-w-sm bg-white shadow-2xl transform transition-transform duration-300 ease-out flex flex-col">
             {/* Header del mobile menu */}
-            <div className="flex h-20 items-center justify-between px-6 border-b border-gray-200/50">
+            <div className="flex h-16 items-center justify-between px-4 border-b border-gray-200 bg-white">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center">
-                  <Image src="/logo1.png" alt="Logo" width={24} height={24} className="h-6 w-auto" />
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center">
+                  <Image src="/logo1.png" alt="Logo" width={20} height={20} className="h-5 w-auto" />
                 </div>
                 <div>
                   <div className="text-sm font-black text-blue-600">SPORTS</div>
@@ -254,9 +254,9 @@ export default function Navbar() {
               </div>
               
               <Button 
-                variant="outline" 
+                variant="ghost" 
                 size="icon" 
-                className="rounded-2xl border-2 border-gray-200/50 bg-white/80 backdrop-blur-sm hover:bg-red-50 hover:border-red-200 transition-all duration-300"
+                className="rounded-lg hover:bg-gray-100 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 <X className="h-5 w-5 text-gray-600" />
@@ -265,107 +265,91 @@ export default function Navbar() {
             </div>
             
             {/* Navegación mobile */}
-            <nav className="px-6 py-8 space-y-3 h-full overflow-y-auto">
-              {navLinks.map((link, index) => {
-                const Icon = link.icon
-                
-                return !link.submenu ? (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className={cn(
-                      "group flex items-center gap-4 px-4 py-4 rounded-2xl transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 animate-in slide-in-from-right-4",
-                    )}
-                    style={{
-                      animationDelay: `${index * 100}ms`
-                    }}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-100 group-hover:from-blue-200 group-hover:to-cyan-200 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                      <Icon className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                        {link.name}
-                      </div>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-300" />
-                  </Link>
-                ) : (
-                  <div 
-                    key={link.name} 
-                    className={cn(
-                      "space-y-3 animate-in slide-in-from-right-4"
-                    )}
-                    style={{
-                      animationDelay: `${index * 100}ms`
-                    }}
-                  >
-                    {/* Título principal */}
-                    <div className="flex items-center gap-4 px-4 py-4 rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-100">
-                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center shadow-lg">
-                        <Icon className="w-5 h-5 text-white" />
+            <nav className="flex-1 px-4 py-4 overflow-y-auto bg-white">
+              <div className="space-y-2">
+                {navLinks.map((link, index) => {
+                  const Icon = link.icon
+                  
+                  return !link.submenu ? (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="group flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 hover:bg-blue-50 active:bg-blue-100"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-100 to-cyan-100 group-hover:from-blue-200 group-hover:to-cyan-200 flex items-center justify-center transition-colors duration-200">
+                        <Icon className="w-5 h-5 text-blue-600" />
                       </div>
                       <div className="flex-1">
-                        <div className="text-lg font-black text-blue-600">{link.name}</div>
-                        <div className="text-sm text-gray-500">Servicios especializados</div>
+                        <div className="text-base font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                          {link.name}
+                        </div>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors duration-200" />
+                    </Link>
+                  ) : (
+                    <div key={link.name} className="space-y-2">
+                      {/* Título principal del menú desplegable */}
+                      <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-50 border border-blue-100">
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                          <Icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="text-base font-bold text-blue-600">{link.name}</div>
+                          <div className="text-xs text-gray-500">Servicios especializados</div>
+                        </div>
+                      </div>
+                      
+                      {/* Submenú */}
+                      <div className="ml-3 pl-3 border-l-2 border-blue-100 space-y-1">
+                        {link.submenu.map((subItem) => {
+                          const SubIcon = subItem.icon
+                          return (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="group flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 hover:bg-gray-50 active:bg-gray-100"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center transition-colors duration-200">
+                                <SubIcon className="w-4 h-4 text-gray-600 group-hover:text-blue-600 transition-colors duration-200" />
+                              </div>
+                              <span className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors duration-200">
+                                {subItem.name}
+                              </span>
+                            </Link>
+                          )
+                        })}
                       </div>
                     </div>
-                    
-                    {/* Submenú */}
-                    <div className="pl-4 space-y-2">
-                      {link.submenu.map((subItem, subIndex) => {
-                        const SubIcon = subItem.icon
-                        return (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className={cn(
-                              "group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-md animate-in slide-in-from-right-2"
-                            )}
-                            style={{
-                              animationDelay: `${(index * 100) + (subIndex * 50)}ms`
-                            }}
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-blue-100 group-hover:to-cyan-100 flex items-center justify-center transition-all duration-300">
-                              <SubIcon className="w-4 h-4 text-gray-600 group-hover:text-blue-600" />
-                            </div>
-                            <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">
-                              {subItem.name}
-                            </span>
-                          </Link>
-                        )
-                      })}
-                    </div>
-                  </div>
-                )
-              })}
+                  )
+                })}
+              </div>
               
               {/* Call to action en mobile */}
-              <div className="pt-8 border-t border-gray-200/50 mt-8">
+              <div className="bg-white border-t border-gray-200 p-4">
                 <Button 
                   asChild
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white shadow-xl hover:shadow-2xl rounded-2xl py-4 font-bold transition-all duration-300 transform hover:scale-105 border-0"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-lg py-3 font-semibold transition-colors duration-200"
                 >
-                  <Link href="/contacto" className="flex items-center justify-center gap-3">
-                    <Phone className="w-5 h-5" />
-                    <span className="text-lg">Contactar Ahora</span>
+                  <Link href="/contacto" className="flex items-center justify-center gap-2" onClick={() => setIsOpen(false)}>
+                    <Phone className="w-4 h-4" />
+                    <span>Contactar Ahora</span>
                   </Link>
                 </Button>
                 
                 {/* Stats en mobile */}
-                <div className="grid grid-cols-3 gap-3 mt-6">
-                  <div className="text-center bg-blue-50 rounded-xl p-3">
-                    <div className="text-lg font-black text-blue-600">5+</div>
+                <div className="grid grid-cols-3 gap-2 mt-3">
+                  <div className="text-center bg-blue-50 rounded-lg p-2">
+                    <div className="text-sm font-bold text-blue-600">5+</div>
                     <div className="text-xs text-gray-500">Servicios</div>
                   </div>
-                  <div className="text-center bg-cyan-50 rounded-xl p-3">
-                    <div className="text-lg font-black text-cyan-600">100+</div>
+                  <div className="text-center bg-cyan-50 rounded-lg p-2">
+                    <div className="text-sm font-bold text-cyan-600">100+</div>
                     <div className="text-xs text-gray-500">Clientes</div>
                   </div>
-                  <div className="text-center bg-purple-50 rounded-xl p-3">
-                    <div className="text-lg font-black text-purple-600">24/7</div>
+                  <div className="text-center bg-purple-50 rounded-lg p-2">
+                    <div className="text-sm font-bold text-purple-600">24/7</div>
                     <div className="text-xs text-gray-500">Soporte</div>
                   </div>
                 </div>
