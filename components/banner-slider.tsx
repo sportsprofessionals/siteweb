@@ -339,25 +339,25 @@ export default function BannerSlider() {
 
               {/* Estadísticas rápidas */}
               <div className={cn(
-                "flex items-center justify-center gap-8 mt-12 opacity-0 animate-in fade-in duration-1000",
+                "flex items-center justify-center gap-4 md:gap-8 mt-8 md:mt-12 mb-16 md:mb-8 opacity-0 animate-in fade-in duration-1000",
                 index === currentSlide && "opacity-100"
               )}
               style={{
                 animationDelay: index === currentSlide ? "1s" : "0s"
               }}>
                 <div className="text-center group">
-                  <div className="text-2xl md:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">5+</div>
-                  <div className="text-sm text-gray-300 uppercase tracking-wider">Servicios</div>
+                  <div className="text-lg md:text-2xl lg:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">5+</div>
+                  <div className="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Servicios</div>
                 </div>
-                <div className="h-8 w-px bg-white/30" />
+                <div className="h-6 md:h-8 w-px bg-white/30" />
                 <div className="text-center group">
-                  <div className="text-2xl md:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">100+</div>
-                  <div className="text-sm text-gray-300 uppercase tracking-wider">Clientes</div>
+                  <div className="text-lg md:text-2xl lg:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">100+</div>
+                  <div className="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Clientes</div>
                 </div>
-                <div className="h-8 w-px bg-white/30" />
+                <div className="h-6 md:h-8 w-px bg-white/30" />
                 <div className="text-center group">
-                  <div className="text-2xl md:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">24/7</div>
-                  <div className="text-sm text-gray-300 uppercase tracking-wider">Soporte</div>
+                  <div className="text-lg md:text-2xl lg:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">24/7</div>
+                  <div className="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Soporte</div>
                 </div>
               </div>
             </div>
@@ -387,7 +387,7 @@ export default function BannerSlider() {
       )}
       
       {/* Indicadores rediseñados */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 md:gap-3">
         {slides.map((slide, index) => (
           <button
             key={index}
@@ -395,8 +395,8 @@ export default function BannerSlider() {
             className={cn(
               "relative overflow-hidden rounded-full transition-all duration-500 group",
               index === currentSlide 
-                ? "w-12 h-4 bg-white" 
-                : "w-4 h-4 bg-white/40 hover:bg-white/60"
+                ? "w-8 md:w-12 h-3 md:h-4 bg-white" 
+                : "w-3 md:w-4 h-3 md:h-4 bg-white/40 hover:bg-white/60"
             )}
             aria-label={`Go to slide ${index + 1}`}
           >
@@ -410,7 +410,7 @@ export default function BannerSlider() {
         ))}
         
         {/* Indicador de auto-play */}
-        <div className="ml-4 flex items-center gap-2 bg-black/20 backdrop-blur-md rounded-full px-3 py-1 border border-white/20">
+        <div className="ml-2 md:ml-4 hidden md:flex items-center gap-2 bg-black/20 backdrop-blur-md rounded-full px-3 py-1 border border-white/20">
           <div className={cn(
             "w-2 h-2 rounded-full transition-colors duration-300",
             isAutoPlaying ? "bg-green-400 animate-pulse" : "bg-gray-400"

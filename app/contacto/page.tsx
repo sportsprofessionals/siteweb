@@ -124,20 +124,20 @@ export default function Contacto() {
         {/* Elementos geométricos */}
         <GeometricShapes />
         
-        <div className="container relative z-10 py-24 md:py-32">
+        <div className="container relative z-10 py-16 md:py-24 lg:py-32 px-4 md:px-6">
           <FadeIn className="text-center max-w-5xl mx-auto">
             {/* Badge premium */}
-            <div className="inline-flex items-center gap-3 rounded-3xl bg-white/10 backdrop-blur-xl px-8 py-4 mb-8 border border-white/20 shadow-2xl">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center shadow-lg">
-                <MessageCircle className="w-4 h-4 text-white" />
+            <div className="inline-flex items-center gap-2 md:gap-3 rounded-2xl md:rounded-3xl bg-white/10 backdrop-blur-xl px-4 md:px-8 py-3 md:py-4 mb-6 md:mb-8 border border-white/20 shadow-2xl">
+              <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center shadow-lg">
+                <MessageCircle className="w-3 h-3 md:w-4 md:h-4 text-white" />
               </div>
-              <span className="text-lg font-bold text-white">
+              <span className="text-sm md:text-lg font-bold text-white">
                 Contacto Directo
               </span>
             </div>
             
             {/* Título cinematográfico */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none tracking-tight mb-6 md:mb-8">
               <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent drop-shadow-2xl">
                 Hablemos de tu
               </span>
@@ -147,35 +147,35 @@ export default function Contacto() {
             </h1>
             
             {/* Descripción premium */}
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed font-light mb-12">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed font-light mb-8 md:mb-12 px-4">
               Estamos aquí para <span className="font-bold text-cyan-400">transformar tus ideas</span> en 
               <span className="font-bold text-blue-400"> resultados extraordinarios</span>. Contáctanos hoy mismo.
             </p>
             
             {/* Garantías de servicio */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-12 md:mt-16">
               <ScaleIn delay={0.2}>
                 <div className="text-center group">
-                  <div className="text-4xl md:text-5xl font-black text-white group-hover:scale-110 transition-transform duration-300">24h</div>
-                  <div className="text-sm text-gray-300 uppercase tracking-wider">Respuesta</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white group-hover:scale-110 transition-transform duration-300">24h</div>
+                  <div className="text-xs sm:text-sm text-gray-300 uppercase tracking-wider">Respuesta</div>
                 </div>
               </ScaleIn>
               <ScaleIn delay={0.4}>
                 <div className="text-center group">
-                  <div className="text-4xl md:text-5xl font-black text-cyan-400 group-hover:scale-110 transition-transform duration-300">100%</div>
-                  <div className="text-sm text-gray-300 uppercase tracking-wider">Personalizado</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-cyan-400 group-hover:scale-110 transition-transform duration-300">100%</div>
+                  <div className="text-xs sm:text-sm text-gray-300 uppercase tracking-wider">Personalizado</div>
                 </div>
               </ScaleIn>
               <ScaleIn delay={0.6}>
                 <div className="text-center group">
-                  <div className="text-4xl md:text-5xl font-black text-blue-400 group-hover:scale-110 transition-transform duration-300">0€</div>
-                  <div className="text-sm text-gray-300 uppercase tracking-wider">Consulta</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-blue-400 group-hover:scale-110 transition-transform duration-300">$0</div>
+                  <div className="text-xs sm:text-sm text-gray-300 uppercase tracking-wider">Consulta</div>
                 </div>
               </ScaleIn>
               <ScaleIn delay={0.8}>
                 <div className="text-center group">
-                  <div className="text-4xl md:text-5xl font-black text-purple-400 group-hover:scale-110 transition-transform duration-300">∞</div>
-                  <div className="text-sm text-gray-300 uppercase tracking-wider">Seguimiento</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-purple-400 group-hover:scale-110 transition-transform duration-300">∞</div>
+                  <div className="text-xs sm:text-sm text-gray-300 uppercase tracking-wider">Seguimiento</div>
                 </div>
               </ScaleIn>
           </div>
@@ -187,7 +187,7 @@ export default function Contacto() {
       </section>
 
       {/* Sección Principal de Contacto */}
-      <section className="relative bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 py-16 md:py-24 lg:py-32 overflow-hidden">
         {/* Elementos decorativos de fondo */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-cyan-400/5 to-transparent rounded-full blur-3xl animate-pulse" />
@@ -195,8 +195,8 @@ export default function Contacto() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-400/3 to-transparent rounded-full blur-3xl animate-pulse delay-150" />
         </div>
         
-        <div className="container relative z-10">
-          <div className="grid gap-16 lg:grid-cols-2">
+        <div className="container relative z-10 px-4 md:px-6">
+          <div className="grid gap-12 md:gap-16 lg:grid-cols-2">
             
             {/* Formulario Premium */}
             <SlideIn direction="left" delay={0.2}>
@@ -205,16 +205,16 @@ export default function Contacto() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
                 
                 {/* Container principal glassmorphism */}
-                <div className="relative bg-white/80 backdrop-blur-2xl rounded-3xl p-8 border border-white/60 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                <div className="relative bg-white/80 backdrop-blur-2xl rounded-2xl md:rounded-3xl p-6 md:p-8 border border-white/60 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
                   
                   {/* Header del formulario */}
-                  <div className="text-center mb-8">
-                    <div className="inline-flex items-center gap-3 rounded-2xl bg-cyan-100/60 backdrop-blur-sm px-6 py-3 border border-cyan-200/40 shadow-lg mb-6">
-                      <Send className="w-5 h-5 text-cyan-600" />
-                      <span className="font-bold text-cyan-600">Formulario de Contacto</span>
+                  <div className="text-center mb-6 md:mb-8">
+                    <div className="inline-flex items-center gap-2 md:gap-3 rounded-xl md:rounded-2xl bg-cyan-100/60 backdrop-blur-sm px-4 md:px-6 py-2 md:py-3 border border-cyan-200/40 shadow-lg mb-4 md:mb-6">
+                      <Send className="w-4 h-4 md:w-5 md:h-5 text-cyan-600" />
+                      <span className="text-sm md:text-base font-bold text-cyan-600">Formulario de Contacto</span>
                     </div>
                     
-                    <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight mb-3 md:mb-4">
                       <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
                         Envíanos tu
                       </span>
@@ -224,7 +224,7 @@ export default function Contacto() {
                       </span>
                     </h2>
                     
-                    <p className="text-gray-700 leading-relaxed font-medium">
+                    <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium px-2">
                       Comparte tu <span className="font-bold text-cyan-600">visión deportiva</span> con nosotros y 
                       descubre cómo podemos <span className="font-bold text-blue-600">transformarla en realidad</span>.
                     </p>
@@ -379,12 +379,12 @@ export default function Contacto() {
                 
                 {/* Header */}
                 <div className="text-center lg:text-left">
-                  <div className="inline-flex items-center gap-3 rounded-2xl bg-blue-100/60 backdrop-blur-sm px-6 py-3 border border-blue-200/40 shadow-lg mb-6">
-                    <Target className="w-5 h-5 text-blue-600" />
-                    <span className="font-bold text-blue-600">Información de Contacto</span>
+                  <div className="inline-flex items-center gap-2 md:gap-3 rounded-xl md:rounded-2xl bg-blue-100/60 backdrop-blur-sm px-4 md:px-6 py-2 md:py-3 border border-blue-200/40 shadow-lg mb-4 md:mb-6">
+                    <Target className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
+                    <span className="text-sm md:text-base font-bold text-blue-600">Información de Contacto</span>
             </div>
 
-                  <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight mb-3 md:mb-4">
                     <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
                       Múltiples Formas
                     </span>
@@ -394,7 +394,7 @@ export default function Contacto() {
                     </span>
                   </h2>
                   
-                  <p className="text-xl text-gray-700 leading-relaxed font-medium mb-8">
+                  <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-medium mb-6 md:mb-8 px-2 lg:px-0">
                     Elige la <span className="font-bold text-blue-600">opción más cómoda</span> para ti y 
                     comencemos a <span className="font-bold text-purple-600">crear algo extraordinario</span> juntos.
                   </p>
@@ -465,24 +465,24 @@ export default function Contacto() {
                         <div className={`absolute -inset-2 bg-gradient-to-r ${colors.gradient} opacity-0 group-hover:opacity-20 rounded-2xl blur-lg transition-all duration-500`} />
                         
                         {/* Tarjeta principal */}
-                        <div className={`relative bg-white/80 backdrop-blur-xl rounded-2xl p-6 border ${colors.border} border-opacity-40 shadow-xl ${colors.glow} group-hover:shadow-2xl transition-all duration-500 group-hover:scale-105`}>
-                <div className="flex items-start gap-4">
-                            <div className={`w-16 h-16 rounded-2xl ${colors.bg} ${colors.border} border flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                              <Icon className={`w-8 h-8 ${colors.text}`} />
+                        <div className={`relative bg-white/80 backdrop-blur-xl rounded-xl md:rounded-2xl p-4 md:p-6 border ${colors.border} border-opacity-40 shadow-xl ${colors.glow} group-hover:shadow-2xl transition-all duration-500 group-hover:scale-105`}>
+                <div className="flex items-start gap-3 md:gap-4">
+                            <div className={`w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl ${colors.bg} ${colors.border} border flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                              <Icon className={`w-6 h-6 md:w-8 md:h-8 ${colors.text}`} />
                             </div>
-                            <div className="flex-1">
-                              <h3 className={`font-bold text-lg ${colors.text} mb-1`}>
+                            <div className="flex-1 min-w-0">
+                              <h3 className={`font-bold text-base md:text-lg ${colors.text} mb-1`}>
                                 {contact.title}
                               </h3>
-                              <p className="text-gray-900 font-semibold text-lg leading-tight mb-1">
+                              <p className="text-gray-900 font-semibold text-sm md:text-base lg:text-lg leading-tight mb-1 break-words">
                                 {contact.content}
                               </p>
-                              <p className="text-gray-600 text-sm">
+                              <p className="text-gray-600 text-xs md:text-sm">
                                 {contact.subtitle}
                               </p>
                             </div>
-                            <div className={`w-8 h-8 rounded-lg ${colors.bg} flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300`}>
-                              <ArrowRight className={`w-4 h-4 ${colors.text}`} />
+                            <div className={`w-6 h-6 md:w-8 md:h-8 rounded-lg ${colors.bg} flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 flex-shrink-0`}>
+                              <ArrowRight className={`w-3 h-3 md:w-4 md:h-4 ${colors.text}`} />
                             </div>
                           </div>
                   </div>
@@ -641,22 +641,22 @@ export default function Contacto() {
             </div>
             
             {/* Estadísticas finales */}
-            <div className="grid grid-cols-4 gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-black text-emerald-400">24h</div>
-                <div className="text-sm text-gray-300 uppercase tracking-wider">Respuesta</div>
+                <div className="text-2xl md:text-3xl font-black text-emerald-400">24h</div>
+                <div className="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Respuesta</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-black text-cyan-400">100%</div>
-                <div className="text-sm text-gray-300 uppercase tracking-wider">Personalizado</div>
+                <div className="text-2xl md:text-3xl font-black text-cyan-400">100%</div>
+                <div className="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Personalizado</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-black text-blue-400">0€</div>
-                <div className="text-sm text-gray-300 uppercase tracking-wider">Consulta</div>
+                <div className="text-2xl md:text-3xl font-black text-blue-400">$0</div>
+                <div className="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Consulta</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-black text-purple-400">100%</div>
-                <div className="text-sm text-gray-300 uppercase tracking-wider">Protección</div>
+                <div className="text-2xl md:text-3xl font-black text-purple-400">100%</div>
+                <div className="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Protección</div>
               </div>
             </div>
           </FadeIn>
