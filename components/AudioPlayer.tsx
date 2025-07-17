@@ -221,7 +221,16 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, title }) => {
               }}
             />
           </div>
-        )}      </div>
+        )}
+
+        {/* Loading state */}
+        {!isLoaded && !isLoading && !error && (
+          <div className="text-center py-4">
+            <p className="text-gray-600 text-sm mb-2">Haz clic en reproducir para cargar el audio</p>
+            <div className="text-xs text-gray-500">Carga optimizada • Solo se descarga cuando lo necesites</div>
+          </div>
+        )}
+      </div>
 
       <style jsx>{`
         .slider::-webkit-slider-thumb {
