@@ -381,41 +381,78 @@ La inclusión de programas de natación adaptados en el currículo escolar es un
 Si desea ampliar este contenido, escríbanos al correo [infosportsprofessionals@gmail.com](mailto:infosportsprofessionals@gmail.com) o a nuestro [WhatsApp](https://wa.me/573105627575).`,
   },
   {
-    id: "acontecimientos-historicos-educacion-fisica",
+    id: "historia-educacion-fisica-norteamerica",
     title:
-      "Acontecimientos históricos y tendencias que han influido en la profesión de la Educación Física (Alemania, Suecia, Inglaterra y Estados Unidos)",
+      "Historia de la Educación Física II - Líderes Históricos de la Educación Física en Norteamérica",
     summary:
-      "Análisis de los aportes históricos y filosóficos de Alemania, Suecia, Inglaterra y Estados Unidos en la evolución de la educación física moderna.",
-    author: "Sportsprofessionals",
-    imageUrl: "/acontecimientos.jpg",
+      "Descubre la fascinante evolución de la educación física en Norteamérica a través de sus visionarios líderes: Thomas Wood, Clark Hetherington y Mabel Lee, quienes transformaron la disciplina en una ciencia holística e inclusiva.",
+    author: "Jane M. Shimon - Adaptado por SPORTSPROFESSIONALS",
+    imageUrl: "/herramientas-deportivas.jpg",
     sport: "Historia de la Educación Física",
-    content: `El desarrollo de la educación física como disciplina profesional y formativa ha estado profundamente influenciado por los aportes históricos y filosóficos de diversos países europeos, particularmente Alemania, Suecia e Inglaterra, cuyas ideas y métodos sentaron las bases de lo que hoy se conoce como educación física moderna. Desde finales del siglo XVIII hasta mediados del XIX, estas naciones moldearon enfoques distintos pero complementarios, que serían posteriormente adoptados y adaptados en los Estados Unidos, con un impacto duradero en la práctica educativa. 
+    content: `Como continuación a nuestro análisis sobre la evolución de la educación física, nos adentraremos en la fascinante historia de su desarrollo en Norteamérica, un proceso profundamente moldeado por influencias europeas y por visionarios líderes que transformaron la disciplina en lo que es hoy. El camino de la educación física en Estados Unidos, desde sus primeras integraciones curriculares hasta su consolidación como una ciencia holística e inclusiva, es un testimonio de su importancia en el desarrollo humano integral.
 
-<youtube-video src="https://youtu.be/xgivU1_VvV8" title="Acontecimientos históricos en Educación Física" />
+**🎧 Audio Complementario:**
+<audio-player src="/videoarticu5.wav" title="Historia de la Educación Física en Norteamérica"></audio-player>
 
-Imagen generada por Meta AI
-Alemania: La fuerza del movimiento organizado 
-En Alemania, el surgimiento del movimiento "Turner" a finales del siglo XVIII marcó un hito clave. Fundado por Friedrich Ludwig Jahn, considerado el padre de la gimnasia moderna, este sistema promovía un tipo de entrenamiento físico estructurado y nacionalista, con el objetivo de fortalecer el cuerpo y el espíritu del ciudadano. Las sociedades Turner, compuestas por clubes gimnásticos, utilizaban equipos pesados como barras horizontales, paralelas, caballos con arcos y otros aparatos diseñados para desarrollar la fuerza, la disciplina y la resistencia. Con la migración alemana hacia los Estados Unidos en el siglo XIX, estas sociedades también se establecieron en territorio norteamericano, llevando consigo sus valores y métodos, y estableciendo un modelo físico-educativo con un fuerte énfasis en la preparación física rigurosa. 
-Suecia: Salud y armonía a través del movimiento sistemático 
-En contraste con el enfoque alemán, el sistema sueco de ejercicio físico, liderado por Per Henrik Ling, priorizaba la salud y el equilibrio corporal mediante movimientos organizados, suaves y terapéuticos. Su propuesta, orientada hacia la prevención de enfermedades y la mejora del bienestar general, utilizaba equipos ligeros como varitas, cuerdas y escaleras, y se fundamentaba en principios científicos, anatómicos y fisiológicos. El método sueco influyó en la educación física como un medio para promover la salud más que la competencia o la fuerza, estableciendo una perspectiva médica y educativa que sería especialmente valorada en instituciones escolares y sanitarias. 
-Inglaterra: El valor moral del deporte y el juego 
-La contribución inglesa se centró en la incorporación de deportes y juegos como herramientas para el desarrollo integral del individuo. El sistema británico promovía la participación en actividades físicas no solo como medio para mejorar la condición física, sino también como vehículo para fomentar valores como el respeto, la cooperación, la autodisciplina y el juego limpio. Al introducir estas prácticas en América, Inglaterra contribuyó decisivamente a la dimensión ética y social del deporte dentro del ámbito escolar, especialmente en los internados y universidades, donde se consideraba que el deporte formaba parte esencial de la formación del carácter. 
+**📹 Video Complementario:**
+<video-player src="https://youtu.be/VIcC9Jw0oe8" title="Desarrollo Histórico de la Educación Física"></video-player>
 
-<audio-player src="/audiohistoria.wav" title="Audio historia de la Educación Física" />
+Las Raíces Europeas y la Semilla en América
 
-Estados Unidos: La institucionalización de la educación física 
-Inspirados por estas corrientes europeas, los Estados Unidos iniciaron un proceso de integración de la educación física en el sistema educativo formal. Uno de los hitos fundamentales ocurrió en 1823, cuando la escuela Round Hill, una institución privada en Northampton, Massachusetts, se convirtió en la primera en requerir educación física como parte de su currículo. Este precedente fue clave para que, durante el resto del siglo XIX, la inclusión de la actividad física en el currículo se convirtiera en una práctica común en muchas escuelas del país. 
-Un año más tarde, en 1824, Catherine Beecher —educadora y reformadora— diseñó el primer programa sistemático de ejercicio para niños estadounidenses. Fundadora del Seminario Femenino de Hartford, Beecher introdujo una forma de ejercicio basada en calistenia, que buscaba el desarrollo físico y moral de las jóvenes. Su influencia fue significativa, especialmente en la promoción de la educación física para las mujeres y su inclusión en las escuelas públicas. Beecher es reconocida como una pionera en defender la importancia del movimiento como parte integral de la formación escolar. 
-Reflexión final 
-Los aportes de Alemania, Suecia, Inglaterra y Estados Unidos no solo marcaron etapas fundamentales en la evolución de la educación física, sino que también generaron una diversidad de enfoques que hoy coexisten en los programas formativos contemporáneos. Ya sea desde la disciplina estructurada de la gimnasia alemana, el enfoque terapéutico sueco, el espíritu deportivo inglés o la integración curricular estadounidense, cada tendencia ha contribuido a consolidar una visión holística del cuerpo, la salud, la educación y el desarrollo humano. 
+La trayectoria de la educación física en Estados Unidos no puede entenderse sin reconocer las sólidas bases establecidas por naciones europeas como Alemania, Suecia e Inglaterra, especialmente desde finales del siglo XVIII hasta mediados del XIX. Estas influencias fueron cruciales para el desarrollo primario de la profesión.
 
-Articulo elaborado por Sportsprofessionals    (logo)
+[IMAGEN: HERRAMIENTAS DEPORTIVAS]
 
-Fuente utilizada: Teacher Certification Study Guide, Physical Education K-12, USA Revised con (IA) 
-Web: https://likewolf.com/turners-gymnastics-and-german-american-athletic-passion-united
-Imagen generada por Meta AI
+Líderes que Forjaron la Educación Física en Norteamérica
 
-Si requiere contenido para su formación y ejercicio docente sobre la historia de la Educación Física y otros temas, escríbenos al correo infosportsprofessionals@gmail.com o a nuestro WhatsApp 3105627575, 
-`,
+A medida que la disciplina se consolidaba, varias figuras clave en Norteamérica impulsaron la educación física más allá de sus inicios, transformándola de una actividad marginal a un componente esencial del desarrollo humano integral. Durante los siglos XIX y XX, Thomas Wood, Clark Hetherington y Mabel Lee, cada uno con sus propias innovaciones, redefinieron el rol y el propósito de la educación física.
+
+Thomas Wood: El Fundador de la "Gimnasia Natural"
+
+Thomas Wood, médico y educador, marcó un punto de inflexión crucial al abogar por un enfoque más moderno y funcional de la educación física, centrado en el estudiante. Wood rompió con los métodos rígidos y mecánicos de la gimnasia sueca o alemana que predominaban en su época. Él propuso la "gimnasia natural", un programa que promovía:
+
+• Actividades que imitaban movimientos cotidianos.
+• Juegos espontáneos y deportes organizados.
+
+Wood argumentaba que estas actividades no solo mejoraban la condición física, sino que también desarrollaban habilidades motoras útiles para la vida diaria. Para él, el movimiento planificado debía estar intrínsecamente ligado al entorno y la cultura del individuo, contribuyendo así no solo al bienestar físico, sino también al desarrollo personal y social integral. Su visión significó un cambio de paradigma, donde la educación física dejó de ser una mera preparación física para convertirse en un medio para una educación holística, priorizando la funcionalidad, el disfrute y la participación del estudiante.
+
+Clark Hetherington: La Educación Física como Proceso Holístico
+
+Clark Hetherington, discípulo de Thomas Wood en la Universidad de Stanford, expandió la visión de su maestro, convirtiéndose en uno de los teóricos más influyentes de la educación física en Estados Unidos. Hetherington propuso un enfoque verdaderamente holístico, reconociendo que la educación física influye en múltiples dimensiones del ser humano, no solo en el cuerpo. En su obra de 1910, identificó cuatro áreas fundamentales del desarrollo humano que la educación física debía abordar:
+
+• **Dominio Orgánico**: Enfocado en el fortalecimiento de los sistemas corporales, como el entrenamiento muscular, la mejora cardiovascular y una nutrición adecuada.
+
+• **Dominio Psicomotor**: Orientado al perfeccionamiento del sistema neuromuscular, fomentando la coordinación, agilidad, fuerza y destreza motriz.
+
+• **Dominio del Carácter**: Dedicado al desarrollo de valores esenciales como la cooperación, responsabilidad, liderazgo y respeto, cultivados a través de la participación en actividades grupales y deportes.
+
+• **Dominio Intelectual**: Estimulando el pensamiento crítico, la toma de decisiones y el aprendizaje autónomo mediante la reflexión sobre la actividad física.
+
+Estas dimensiones anticiparon los dominios del aprendizaje que hoy son centrales en los currículos de educación física y la formación docente. Hetherington insistió en que la educación física era tan crucial como cualquier otra asignatura académica, ya que contribuía al desarrollo integral del estudiante, consolidando su legado como una disciplina educativa y no meramente recreativa.
+
+[IMAGEN: ENTRENADOR DE FUTBOL ENSEÑANDO]
+
+Mabel Lee: La Pionera en la Defensa de la Educación Física para las Mujeres
+
+En un período de profundas restricciones para la participación femenina en la actividad física, Mabel Lee emergió como una valiente defensora de la educación física para las mujeres. Profesora en la Universidad de Nebraska en la década de 1920, Lee enfrentó la arraigada creencia de que el ejercicio físico era perjudicial para la salud femenina, especialmente en relación con la reproducción, o que era una actividad trivial.
+
+Lee se encontró con fuertes resistencias por parte de médicos, autoridades escolares, padres e incluso algunas estudiantes. Era común recibir solicitudes de excusas médicas, a menudo basadas en supuestos "problemas menstruales" o "fragilidad física", conocidas sarcásticamente como "pulir manzanas". Sin embargo, Lee respondió con datos empíricos y estudios estadísticos, demostrando el estado de descondición física de las estudiantes y evidenciando deficiencias en fuerza, resistencia y salud general.
+
+A través de una campaña rigurosa y fundamentada, Lee logró transformar progresivamente las actitudes institucionales y comunitarias. Su trabajo no solo mejoró la aceptación de la educación física femenina, sino que también sentó precedentes para la inclusión de programas físicos científicamente diseñados para mujeres, promoviendo su autonomía, salud y dignidad. La labor de Mabel Lee fue fundamental para desmantelar mitos sobre el cuerpo femenino y abrir espacios para la equidad en la educación física, convirtiéndola en una figura emblemática del feminismo en el deporte y la educación.
+
+Conclusión
+
+En resumen, la historia de la educación física en Norteamérica es una narrativa de adaptación y progreso continuo. Desde la integración de los sistemas europeos hasta la visión innovadora de Thomas Wood, la articulación holística de Clark Hetherington y la incansable lucha de Mabel Lee por la equidad de género, cada capítulo ha contribuido a consolidar una disciplina que hoy se valora por su capacidad de nutrir el cuerpo, la mente y el espíritu de manera integral. La educación física ha trascendido su propósito inicial para convertirse en un pilar esencial de la formación escolar y el desarrollo humano.
+
+**Bibliografía:**
+• Shimon, J. M. (2011). Introducción a la enseñanza de la educación física, principios y estrategias. Human Kinetics.
+• Hetherington, C. (1910). The Aims of Physical Education. New York: American Book Company.
+• La Salle, E. (1951). A History of Physical Education and Sport in the United States. New York: Ronald Press.
+• Lee, M. (1978). The Challenge of Physical Education for Women. Journal of Physical Education and Recreation, 49(5), 34-37.
+• Van Dalen, D. B., & Bennett, B. (1971). A World History of Physical Education: Cultural, Philosophical, Comparative. Englewood Cliffs, NJ: Prentice-Hall.
+• Guttmann, A. (1978). From Ritual to Record: The Nature of Modern Sports. New York: Columbia University Press.
+• Park, R. J. (1983). The Emergence of the Women Physical Educators: Education, Exercise, and Agency, 1890–1940. Journal of Sport History, 10(1), 3–35.
+
+Si requiere contenido para su formación y ejercicio docente sobre la historia de la Educación Física y otros temas, escríbanos al correo [infosportsprofessionals@gmail.com](mailto:infosportsprofessionals@gmail.com) o a nuestro [WhatsApp](https://wa.me/573105627575).`,
   },
 ];

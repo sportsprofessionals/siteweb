@@ -25,3 +25,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large files
+public/herramientas-deportivas.jpg
+public/videoarticu5.wav
+*.wav
+# Ignore all files larger than 50MB
+public/*.jpg
+public/*.jpeg
+public/*.png
+public/*.gif
+public/*.mp4
+public/*.mov
+public/*.avi

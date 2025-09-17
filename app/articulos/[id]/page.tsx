@@ -6,6 +6,7 @@ import { useAnimation } from "@/components/animation-provider";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import AudioPlayer from "@/components/AudioPlayer";
+import VideoPlayer from "@/components/VideoPlayer";
 
 export default function ArticlePage() {
   const { FadeIn, SlideIn } = useAnimation();
@@ -77,6 +78,10 @@ export default function ArticlePage() {
           imageName = "baloncesto.jpg";
         } else if (imageType.includes("EDUCACION FISICA") || imageType.includes("ESCOLAR")) {
           imageName = "educacion-fisica.jpg";
+        } else if (imageType.includes("HERRAMIENTAS DEPORTIVAS")) {
+          imageName = "/herramientas-deportivas.jpg";
+        } else if (imageType.includes("ENTRENADOR DE FUTBOL") || imageType.includes("ENTRENADOR")) {
+          imageName = "/entrenador-de-futbol-ensenando-sus-alumnos.jpg";
         } else {
           // Default to article main image if specific type not found
           imageName = article.imageUrl.split('/').pop() || "default.jpg";
@@ -119,34 +124,22 @@ export default function ArticlePage() {
         return;
       }
 
-      // Handle YouTube video players
-      if (paragraph.includes("<youtube-video")) {
-        const srcMatch = paragraph.match(/src=\"([^\"]+)\"/);
-        const titleMatch = paragraph.match(/title=\"([^\"]+)\"/);
+      // Handle video players
+      if (paragraph.includes("<video-player")) {
+        const srcMatch = paragraph.match(/src="([^"]+)"/);
+        const titleMatch = paragraph.match(/title="([^"]+)"/);
+        
         if (srcMatch && titleMatch) {
           const src = srcMatch[1];
           const title = titleMatch[1];
-          // Extraer el ID del video de YouTube
-          let videoId = '';
-          const youtubeMatch = src.match(/(?:youtu.be\/|youtube.com\/(?:watch\?v=|embed\/|v\/|shorts\/)?)([\w-]{11})/);
-          if (youtubeMatch) {
-            videoId = youtubeMatch[1];
-          }
-          if (videoId) {
-            result.push(
-              <div key={`youtube-${index}`} className="my-8 w-full flex justify-center">
-                <div className="w-full max-w-2xl aspect-video rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${videoId}`}
-                    title={title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
-              </div>
-            );
-          }
+          
+          result.push(
+            <VideoPlayer 
+              key={`video-${index}`}
+              src={src}
+              title={title}
+            />
+          );
         }
         return;
       }
