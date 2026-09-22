@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { MapPin, Phone, Clock, Building, Users, ArrowLeft, Trophy, Target, CheckCircle, Sparkles, ArrowRight, ExternalLink, Zap, Award, Star } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Building, Users, ArrowLeft, Trophy, Target, CheckCircle, Sparkles, ArrowRight, ExternalLink, Zap, Award, Star } from "lucide-react"
 import { useAnimation } from "@/components/animation-provider"
 
 // Componente de partículas flotantes (chispas de fuego)
@@ -77,56 +77,56 @@ const FireShapes = () => (
   </div>
 )
 
-export default function FenixDetail() {
+export default function GarzagolDetail() {
   const { FadeIn, SlideIn, ScaleIn } = useAnimation()
 
   const instalaciones = [
     {
-      tipo: "Canchas de Voleibol",
-      cantidad: "4 canchas reglamentarias",
-      descripcion: "Canchas profesionales equipadas para entrenamiento y competencia",
+      tipo: "Sede 1 · La Floresta",
+      cantidad: "Canchas sintéticas",
+      descripcion: "Espacio principal de entrenamiento y formación deportiva",
       disponible: true,
       icono: Trophy,
       color: "orange"
     },
     {
-      tipo: "Canchas de Baloncesto",
-      cantidad: "2 canchas reglamentarias",
-      descripcion: "Próximamente disponibles para alquiler",
-      disponible: false,
+      tipo: "Sede 2 · Zona Industrial El Papayo",
+      cantidad: "Canchas sintéticas",
+      descripcion: "Espacio adicional disponible para alquiler y prácticas deportivas",
+      disponible: true,
       icono: Target,
       color: "red"
     }
   ] as const
 
   const servicios = [
-    "Alquiler de canchas por horas",
-    "Entrenamiento de equipos",
-    "Torneos y competencias",
-    "Espacios para eventos deportivos",
-    "Asesoría deportiva"
+    "Escuela de formación desde los 2 años hasta Categoría Libre",
+    "Canchas sintéticas de alto desempeño",
+    "Alquiler de instalaciones al público",
+    "Torneos relámpago y prácticas recreativas",
+    "Formación en valores humanos y disciplina deportiva"
   ]
 
   const ventajas = [
     {
       icono: Trophy,
-      titulo: "Canchas Reglamentarias",
-      descripcion: "Instalaciones profesionales que cumplen con todos los estándares oficiales"
+      titulo: "Más de una Década de Trayectoria",
+      descripcion: "Referente en la formación integral de futbolistas en Ibagué, la Capital Musical"
     },
     {
       icono: MapPin,
-      titulo: "Ubicación Estratégica",
-      descripcion: "Fácil acceso en el corazón de Bogotá, cerca de importantes centros comerciales"
+      titulo: "Dos Sedes en Ibagué",
+      descripcion: "Instalaciones en el Barrio La Floresta y en la Zona Industrial El Papayo"
     },
     {
       icono: Clock,
-      titulo: "Horarios Flexibles",
-      descripcion: "Disponibilidad adaptada a las necesidades de equipos y atletas"
+      titulo: "Formación por Etapas",
+      descripcion: "Entrenamientos adaptados desde los 2 años hasta la Categoría Libre"
     },
     {
       icono: Star,
-      titulo: "Atención Profesional",
-      descripcion: "Servicio al cliente de excelencia con personal altamente capacitado"
+      titulo: "Valores Humanos",
+      descripcion: "Disciplina deportiva combinada con formación integral en un espacio seguro y profesional"
     }
   ]
 
@@ -162,24 +162,24 @@ export default function FenixDetail() {
                     <Zap className="w-4 h-4 text-white" />
                   </div>
                   <span className="text-lg font-bold text-white">
-                    Centro Deportivo Elite
+                    Escuela de Formación Deportiva
                   </span>
                 </div>
                 
                 {/* Título cinematográfico */}
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-none tracking-tight mb-6">
                   <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent drop-shadow-2xl">
-                    Centro
+                    Club Deportivo
                   </span>
                   <span className="block bg-gradient-to-r from-orange-400 via-amber-400 to-red-400 bg-clip-text text-transparent drop-shadow-xl">
-                    FENIX
+                    GARZAGOL
                   </span>
                 </h1>
                 
                 {/* Descripción premium */}
                 <p className="text-xl md:text-2xl text-gray-200 max-w-3xl leading-relaxed font-light mb-8">
-                  Centro deportivo especializado en <span className="font-bold text-orange-400">voleibol y baloncesto</span> con 
-                  <span className="font-bold text-amber-400"> instalaciones reglamentarias</span> de primer nivel.
+                  Con más de una <span className="font-bold text-orange-400">década de trayectoria</span> en la Capital Musical, un pilar fundamental en la 
+                  <span className="font-bold text-amber-400"> formación integral de futbolistas</span> en Ibagué.
                 </p>
 
                 {/* Información de contacto rápida */}
@@ -187,15 +187,15 @@ export default function FenixDetail() {
                   <div className="flex items-center gap-3 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
                     <MapPin className="w-5 h-5 text-amber-400" />
                     <div>
-                      <div className="text-white font-medium">Barrio Salazar Gómez</div>
-                      <div className="text-gray-300 text-sm">Carrera 60 #11-38</div>
+                      <div className="text-white font-medium">Barrio La Floresta</div>
+                      <div className="text-gray-300 text-sm">Calle 60 N° 4-50</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
                     <Phone className="w-5 h-5 text-orange-400" />
                     <div>
                       <div className="text-white font-medium">Contacto</div>
-                      <div className="text-gray-300 text-sm">313 214 1903</div>
+                      <div className="text-gray-300 text-sm">318 376 463</div>
                     </div>
                   </div>
                 </div>
@@ -213,8 +213,8 @@ export default function FenixDetail() {
                   <div className="relative bg-white/10 backdrop-blur-2xl rounded-3xl p-8 border border-white/20 shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105">
                     <div className="relative h-48 w-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-sm">
                   <Image
-                    src="/fenix-logo.jpg"
-                    alt="Logo Centro FENIX"
+                    src="/garzagol-logo.jpg"
+                    alt="Logo Club Deportivo Garzagol"
                         fill
                         className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
                     onError={(e) => {
@@ -271,8 +271,8 @@ export default function FenixDetail() {
             </h2>
             
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
-              Contamos con <span className="font-bold text-orange-600">instalaciones modernas</span> y 
-              <span className="font-bold text-red-600"> reglamentarias</span> para la práctica deportiva profesional.
+              Contamos con <span className="font-bold text-orange-600">canchas sintéticas modernas</span> y 
+              <span className="font-bold text-red-600"> dos sedes en Ibagué</span> para la práctica del fútbol formativo y recreativo.
             </p>
           </FadeIn>
 
@@ -384,7 +384,7 @@ export default function FenixDetail() {
                 <div className="space-y-4">
                   <div className="inline-flex items-center gap-3 rounded-2xl bg-white/10 backdrop-blur-xl px-6 py-3 border border-white/20 shadow-lg">
                     <Sparkles className="w-5 h-5 text-amber-400" />
-                    <span className="font-bold text-white">Centro de Elite</span>
+                    <span className="font-bold text-white">Escuela de Formación</span>
                   </div>
                   
                   <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">
@@ -393,16 +393,15 @@ export default function FenixDetail() {
                     </span>
                     <br />
                     <span className="text-white">
-                      Centro FENIX
+                      Club Garzagol
                     </span>
                   </h2>
                 </div>
                 
                 {/* Descripción principal */}
                 <p className="text-xl text-gray-200 leading-relaxed font-medium">
-                  El Centro de Desarrollo Deportivo FENIX es un <span className="font-bold text-orange-400">moderno centro deportivo</span> ubicado 
-                  estratégicamente en el Barrio Salazar Gómez, especializado en brindar espacios de alta calidad para la práctica 
-                  del <span className="font-bold text-amber-400">voleibol y próximamente baloncesto</span>.
+                  Con más de una <span className="font-bold text-orange-400">década de trayectoria</span> en la "Capital Musical", el Club Deportivo Garzagol se ha consolidado como un pilar fundamental en la 
+                  formación integral de futbolistas en Ibagué. Su enfoque combina la <span className="font-bold text-amber-400">disciplina deportiva</span> con valores humanos, brindando un espacio seguro y profesional para el desarrollo del talento local.
                 </p>
                 
                 {/* Información de contacto premium */}
@@ -413,12 +412,10 @@ export default function FenixDetail() {
                         <MapPin className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="text-white font-bold mb-2">Ubicación Estratégica</h4>
+                        <h4 className="text-white font-bold mb-2">Nuestras Sedes</h4>
                         <div className="space-y-1 text-gray-300">
-                          <p>Barrio Salazar Gómez</p>
-                          <p>Carrera 60 #11-38</p>
-                          <p>Outlets de las Américas</p>
-                          <p className="text-sm text-gray-400">Cerca Centro Comercial Plaza Central - Entre Américas y Calle 13</p>
+                          <p>Sede 1: Calle 60 N° 4-50, Barrio La Floresta</p>
+                          <p>Sede 2: Cra. 8 Sur N° 50-03, Zona Industrial El Papayo</p>
                         </div>
                       </div>
                     </div>
@@ -430,19 +427,32 @@ export default function FenixDetail() {
                         <Phone className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="text-white font-bold mb-2">Teléfonos de Contacto</h4>
+                        <h4 className="text-white font-bold mb-2">Teléfono de Contacto</h4>
                         <div className="space-y-1">
                           <a 
-                            href="tel:3132141903" 
+                            href="tel:318376463" 
                             className="block text-amber-400 hover:text-amber-300 font-medium transition-colors"
                           >
-                            313 214 1903
+                            318 376 463
                           </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center shadow-lg">
+                        <Mail className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-white font-bold mb-2">Correo Electrónico</h4>
+                        <div className="space-y-1">
                           <a 
-                            href="tel:3116486446" 
+                            href="mailto:garzagolibague@gmail.com" 
                             className="block text-orange-400 hover:text-orange-300 font-medium transition-colors"
                           >
-                            311 648 6446
+                            garzagolibague@gmail.com
                           </a>
                         </div>
                       </div>
@@ -456,7 +466,7 @@ export default function FenixDetail() {
                     asChild 
                     className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white shadow-2xl hover:shadow-3xl rounded-2xl px-8 py-4 font-bold transition-all duration-300 transform hover:scale-105 border-0"
                   >
-                    <a href="tel:3132141903" className="flex items-center gap-3">
+                    <a href="tel:318376463" className="flex items-center gap-3">
                       <Phone className="w-5 h-5" />
                       <span>Contactar Ahora</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -474,7 +484,7 @@ export default function FenixDetail() {
                     ¿Por qué <span className="text-amber-400">Elegirnos?</span>
                   </h3>
                   <p className="text-gray-300">
-                    Características que nos distinguen como centro deportivo
+                    Características que nos distinguen como club deportivo
                   </p>
                 </div>
 
@@ -507,4 +517,4 @@ export default function FenixDetail() {
       </section>
     </div>
   )
-} 
+}
