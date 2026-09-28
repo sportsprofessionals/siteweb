@@ -213,7 +213,7 @@ export default function GarzagolDetail() {
                   <div className="relative bg-white/10 backdrop-blur-2xl rounded-3xl p-8 border border-white/20 shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105">
                     <div className="relative h-48 w-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-sm">
                   <Image
-                    src="/garzagol-logo.png"
+                    src="/logos/garzagol-logo.png"
                     alt="Logo Club Deportivo Garzagol"
                         fill
                         className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
