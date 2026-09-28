@@ -411,7 +411,7 @@ export default function Home() {
 
           {/* Tarjetas de Aliados Ultra-Modernas */}
           <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto mb-16">
-            {/* Centro FENIX - Rediseñado */}
+           {/* Club Deportivo Garzagol */}
             <ScaleIn delay={0.1}>
               <div className="group relative">
                 {/* Contenedor con efecto 3D */}
@@ -426,8 +426,8 @@ export default function Home() {
                     <div className="flex items-start justify-between mb-8">
                       <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-white/60 group-hover:shadow-xl transition-all duration-500">
                   <Image
-                    src="/fenix-logo.jpg"
-                    alt="Centro FENIX"
+                    src="/logos/garzagol-logo.png"
+                    alt="Club Deportivo Garzagol"
                     width={160}
                     height={80}
                           className="object-contain w-36 h-18 group-hover:scale-110 transition-transform duration-500"
@@ -437,17 +437,17 @@ export default function Home() {
                   />
                 </div>
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl px-4 py-2 shadow-lg">
-                        <span className="text-sm font-bold">Centro Deportivo</span>
+                        <span className="text-sm font-bold">Club de Formación</span>
                       </div>
                     </div>
                     
                     <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6 leading-tight group-hover:text-cyan-600 transition-colors duration-500">
-                      Centro de Desarrollo Deportivo FENIX
+                      Club Deportivo Garzagol
                     </h3>
                     
                     <p className="text-gray-600 text-lg leading-relaxed mb-8 font-medium">
-                      Especializado en <span className="text-cyan-600 font-bold">canchas de voleibol y baloncesto reglamentarias</span> ubicado 
-                      en Barrio Salazar Gómez, ofreciendo instalaciones de primer nivel.
+                      Escuela de formación futbolística con <span className="text-cyan-600 font-bold">más de una década de trayectoria</span> en 
+                      Ibagué, para niños y niñas desde los 2 años hasta Categoría Libre.
                     </p>
                     
                     {/* Características con iconos */}
@@ -458,7 +458,7 @@ export default function Home() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <span className="font-semibold">4 canchas de voleibol reglamentarias</span>
+                        <span className="font-semibold">Escuela de formación desde los 2 años</span>
                       </div>
                       <div className="flex items-center gap-4 text-gray-700">
                         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center shadow-lg">
@@ -466,13 +466,13 @@ export default function Home() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </div>
-                        <span className="font-semibold">Próximamente canchas de baloncesto</span>
+                        <span className="font-semibold">Alquiler de canchas al público</span>
                       </div>
                     </div>
                     
                     <Button asChild className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-cyan-500/25 rounded-2xl py-4 text-lg font-bold transition-all duration-300 group-hover:scale-105">
-                      <Link href="/aliados-deportivos/fenix" className="flex items-center justify-center gap-3">
-                        <span>Conocer Centro FENIX</span>
+                      <Link href="/aliados-deportivos/garzagol" className="flex items-center justify-center gap-3">
+                        <span>Conocer Club Garzagol</span>
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                       </Link>
                 </Button>
