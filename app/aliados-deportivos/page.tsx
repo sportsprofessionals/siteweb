@@ -71,16 +71,16 @@ const GeometricShapes = () => (
 
 const aliados: Aliado[] = [
   {
-    id: "fenix",
-    nombre: "Centro de Desarrollo Deportivo FENIX",
-    descripcion: "Centro especializado en alquiler de espacios deportivos con canchas de voleibol y próximamente baloncesto",
-    ubicacion: "Barrio Salazar Gómez, Carrera 60 #11-38",
-    telefono: "3132141903",
-    telefonoAdicional: "3116486446",
+    id: "garzagol",
+    nombre: "Club Deportivo Garzagol",
+    descripcion: "Escuela de formación futbolística con más de una década de trayectoria en Ibagué, para niños y niñas desde los 2 años hasta Categoría Libre",
+    ubicacion: "Sede 1: Calle 60 N° 4-50, Barrio La Floresta",
+    telefono: "318376463",
+    telefonoAdicional: undefined,
     website: undefined,
-    logo: "/fenix-logo.jpg",
-    servicios: ["4 canchas de voleibol reglamentarias", "Próximamente 2 canchas de baloncesto"],
-    tipo: "Centro deportivo",
+    logo: "/garzagol-logo.jpg",
+    servicios: ["Escuela de formación desde los 2 años", "Canchas sintéticas modernas", "Alquiler de instalaciones al público"],
+    tipo: "Club de formación",
     gradient: "from-blue-500 to-cyan-600",
     bgGradient: "from-blue-500/10 to-cyan-500/10",
     accent: "blue"
@@ -287,8 +287,8 @@ export default function AliadosDeportivos() {
                       <Image
                         src={aliado.logo}
                         alt={`Logo ${aliado.nombre}`}
-                        width={aliado.id === "fenix" ? 140 : 80}
-                        height={aliado.id === "fenix" ? 70 : 100}
+                        width={aliado.id === "garzagol" ? 140 : 80}
+                        height={aliado.id === "garzagol" ? 70 : 100}
                               className="object-contain max-w-full max-h-full"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg"
