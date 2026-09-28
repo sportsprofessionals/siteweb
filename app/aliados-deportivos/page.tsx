@@ -78,7 +78,7 @@ const aliados: Aliado[] = [
     telefono: "318376463",
     telefonoAdicional: undefined,
     website: undefined,
-    logo: "/garzagol-logo.png",
+    logo: "/logos/garzagol-logo.png",
     servicios: ["Escuela de formación desde los 2 años", "Canchas sintéticas modernas", "Alquiler de instalaciones al público"],
     tipo: "Club de formación",
     gradient: "from-blue-500 to-cyan-600",
