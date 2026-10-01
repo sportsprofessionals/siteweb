@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import Image from "next/image"
-import { ChevronLeft, ChevronRight, ArrowRight, Play, Sparkles, Zap } from "lucide-react"
+import { ChevronLeft, ChevronRight, ArrowRight, Play, Sparkles, Zap, Target } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
@@ -12,7 +11,8 @@ interface Slide {
   title: string
   subtitle: string
   description: string
-  image: string
+  video: string
+  poster: string
   href?: string
   accent: string
   icon: any
@@ -20,11 +20,23 @@ interface Slide {
 
 const slides: Slide[] = [
   {
+    id: "principal",
+    title: "Soluciones Integrales",
+    subtitle: "para el Ecosistema Deportivo",
+    description: "Expertos que transforman teoría en práctica para elevar los estándares de gestión en deporte, actividad física, recreación y educación física.",
+    video: "/videos/principal.mp4",
+    poster: "/admin-deportiva-2.jpg",
+    href: "/servicios",
+    accent: "from-sky-400 to-indigo-500",
+    icon: Target,
+  },
+  {
     id: "admin-deportiva",
     title: "Administración",
     subtitle: "Deportiva",
-    description: "Planeación estratégica, liderazgo y marketing social del deporte con enfoque profesional e innovador.",
-    image: "/admin-deportiva-2.jpg",
+    description: "Gestión, planificación estratégica, marketing deportivo y administración de eventos e instalaciones para profesionalizar tu organización.",
+    video: "/videos/administracion-deportiva.mp4",
+    poster: "/admin-deportiva-2.jpg",
     href: "/servicios/administracion-deportiva",
     accent: "from-blue-400 to-cyan-500",
     icon: ChevronRight,
@@ -33,8 +45,9 @@ const slides: Slide[] = [
     id: "educacion-fisica",
     title: "Educación",
     subtitle: "Física",
-    description: "Administración y gestión educativa escolar y comunitaria, formación integral de habilidades motoras.",
-    image: "/educacion-fisica-2.jpg",
+    description: "Metodologías de enseñanza, desarrollo de habilidades motoras y didáctica del deporte escolar.",
+    video: "/videos/educacion-fisica.mp4",
+    poster: "/educacion-fisica-2.jpg",
     href: "/servicios/educacion-fisica",
     accent: "from-purple-400 to-pink-500",
     icon: Sparkles,
@@ -43,8 +56,9 @@ const slides: Slide[] = [
     id: "actividad-fisica",
     title: "Actividad",
     subtitle: "Física",
-    description: "Pausas activas empresariales, programas de bienestar y acondicionamiento físico personalizado.",
-    image: "/actividad-fisica-2.jpg",
+    description: "Programas de actividad física para adultos mayores, personas en condición de discapacidad y acondicionamiento físico empresarial.",
+    video: "/videos/actividad-fisica.mp4",
+    poster: "/actividad-fisica-2.jpg",
     href: "/servicios/actividad-fisica",
     accent: "from-orange-400 to-red-500",
     icon: Zap,
@@ -53,8 +67,9 @@ const slides: Slide[] = [
     id: "deporte",
     title: "Deporte",
     subtitle: "Competitivo",
-    description: "Capacitación en entrenamiento deportivo, formación de monitores y turismo deportivo especializado.",
-    image: "/deporte-2.jpg",
+    description: "Cursos de natación, tenis, voleibol, baloncesto y fútbol, además de metodologías de entrenamiento e iniciación deportiva para niños, jóvenes y adultos.",
+    video: "/videos/deporte.mp4",
+    poster: "/deporte-2.jpg",
     href: "/servicios/deporte",
     accent: "from-green-400 to-emerald-500",
     icon: Play,
@@ -63,8 +78,9 @@ const slides: Slide[] = [
     id: "recreacion",
     title: "Recreación",
     subtitle: "Integral",
-    description: "Experiencias activas y bienestar integral para empresas, instituciones y comunidades.",
-    image: "/recreacion-2.jpg",
+    description: "Actividades recreativas, programas de recreación empresarial y recreación para niños y adultos.",
+    video: "/videos/recreacion.mp4",
+    poster: "/recreacion-2.jpg",
     href: "/servicios/recreacion",
     accent: "from-indigo-400 to-blue-500",
     icon: ArrowRight,
@@ -225,17 +241,19 @@ export default function BannerSlider() {
               : "opacity-0 scale-110 pointer-events-none",
           )}
         >
-          {/* Imagen de fondo con parallax */}
+          {/* Video de fondo */}
           <div className="absolute inset-0 overflow-hidden">
-            <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
+            <video
+              src={slide.video}
+              poster={slide.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
               className={cn(
-                "object-cover transition-transform duration-[3000ms] ease-out",
+                "absolute inset-0 w-full h-full object-cover transition-transform duration-[3000ms] ease-out",
                 index === currentSlide ? "scale-105" : "scale-100"
               )}
-              priority={index === 0}
             />
             {/* Overlay gradiente dinámico */}
             <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/40" />
