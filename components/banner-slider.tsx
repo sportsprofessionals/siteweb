@@ -66,7 +66,7 @@ const slides: Slide[] = [
   {
     id: "deporte",
     title: "Deporte",
-    subtitle: "Competitivo",
+    subtitle: "",
     description: "Cursos de natación, tenis, voleibol, baloncesto y fútbol, además de metodologías de entrenamiento e iniciación deportiva para niños, jóvenes y adultos.",
     video: "/videos/deporte.mp4",
     poster: "/deporte-2.jpg",
@@ -77,7 +77,7 @@ const slides: Slide[] = [
   {
     id: "recreacion",
     title: "Recreación",
-    subtitle: "Integral",
+    subtitle: "",
     description: "Actividades recreativas, programas de recreación empresarial y recreación para niños y adultos.",
     video: "/videos/recreacion.mp4",
     poster: "/recreacion-2.jpg",
