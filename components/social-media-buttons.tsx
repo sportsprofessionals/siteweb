@@ -13,7 +13,7 @@ export default function SocialMediaButtons() {
   }
 
   const openLinkedIn = () => {
-    window.open("www.linkedin.com/in/sports-professionals-782205362", "_blank")
+    window.open("https://www.linkedin.com/in/sports-professionals-782205362", "_blank")
   }
 
   const openWhatsApp = () => {
