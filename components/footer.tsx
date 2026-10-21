@@ -236,7 +236,7 @@ export default function Footer() {
                     gradient: "from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500"
                   },
                   { 
-                    href: "www.linkedin.com/in/sports-professionals-782205362", 
+                    href: "https://www.linkedin.com", 
                     icon: Linkedin, 
                     name: "LinkedIn",
                     gradient: "from-blue-700 to-blue-800 hover:from-blue-600 hover:to-blue-700"
