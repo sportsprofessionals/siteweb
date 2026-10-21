@@ -13,7 +13,7 @@ export default function SocialButtons() {
   }
 
   const openLinkedIn = () => {
-    window.open("", "_blank")
+    window.open("www.linkedin.com/in/sports-professionals-782205362", "_blank")
   }
 
   return (
