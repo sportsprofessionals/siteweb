@@ -9,6 +9,7 @@ import SocialMediaButtons from "@/components/social-media-buttons"
 import { AnimationProvider } from "@/components/animation-provider"
 import GoogleAnalytics from "@/components/google-analytics"
 import Script from "next/script"
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -82,6 +83,7 @@ export default function RootLayout({
             </div>
           </AnimationProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
